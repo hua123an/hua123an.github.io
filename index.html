@@ -5,29 +5,35 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>IT华安</title>
+    <title>IT华安</title>
+    <script src="code.jquery.com_jquery-3.7.0.js"></script>
 </head>
 <body>
 
 
 <div class="home-main">
-<!--    顶部导航条-->
-    <div class="topNav fix-top"></div>
+
+    <div class="topNav fix-top">
+        <div class="nav scroll bg-white shadow fixed-top">
+            <nav class="nav">
+                <a href="index.html">首页</a>
+                <a href="AI.html">AI专区</a>
+            </nav>
+        </div>
+    </div>
 
     <div class="nav scroll bg-white shadow fixed-top">
         <nav class="nav nav-underline">
-            <a href="#" class="nav-link active">
-                <i class="fa fa-compass" aria-hidden="true"></i>
-                快速导航
-            </a>
+            <center>
             <a href="#common" class="nav-link">常用工具</a>
             <a href="#compile" class="nav-link">编译工具</a>
-            <a href="" class="nav-link">three</a>
+            <a href="#technology" class="nav-link">技术学习</a>
             <a href="" class="nav-link">four</a>
             <a href="" class="nav-link">five</a>
             <a href="" class="nav-link">six</a>
             <a href="" class="nav-link">seven</a>
             <a href="" class="nav-link">eight</a>
+            </center>
         </nav>
     </div>
     <div class="container" style="max-width: 1600px">
@@ -43,33 +49,543 @@
         <div class="indexGroup" id="compile" data-text="编译工具">
             <div id="compileTools" class="index">编译工具<br></div>
         </div>
+        <div class="indexGroup" id="technology" data-text="技术学习">
+            <div id="technologyLearning" class="index">技术学习<br></div>
+        </div>
 
-        <a href="" ></a>
+
+        <a href=""></a>
     </div>
 
 </div>
 <script>
-    const commonTools = [{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/47/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/html.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJS 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/51/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/js.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tCSS 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/52/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/css.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJSON 在线解析 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/53/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/json.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRGB转16进制工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/55/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/rgb.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线进制转换器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/58/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/binary.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片转 BASE64 编码 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/59/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/image2base64.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML/CSS/JS 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/61/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/htmlcssjs.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t随机密码生成器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/686/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/key.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 编码/解码 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/691/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/1473407898_Coding-Html.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tBase64 编码/解码 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/693/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/45920.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tURL 编码/解码 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/695/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/1473410242_url.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tSQL 格式化/压缩工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/701/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/sql_query-128.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tMD5 加密 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/703/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/md5.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tSHA 加密 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/706/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/olive-data-encryption-128.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tXML、JSON 在线转换 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/708/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/images.jpeg"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线 XML 格式化 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/710/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/iconfinder_application-xml_28904.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tMarkdown 在线编辑器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/712/","img":"https://tools.haiyong.site/wp-content/uploads/2016/09/markdown-icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 转 JavaScript 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/846/","img":"https://tools.haiyong.site/wp-content/uploads/2016/11/1480248614_Html.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tUNIX 时间戳转换 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/852/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2016/11/history-128.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t正则表达式在线测试 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/854/","img":"https://tools.haiyong.site/wp-content/uploads/2016/11/regular.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRGB HSV 转换 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/868/","img":"https://tools.haiyong.site/wp-content/uploads/2016/12/1481023129_HSV.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRGB CMYK 转换工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/870/","img":"https://tools.haiyong.site/wp-content/uploads/2016/12/1481023045_cmyk.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHEX CMYK 转换工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/873/","img":"https://tools.haiyong.site/wp-content/uploads/2016/12/1481024809_CMYK.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHEX HSV 转换工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/875/","img":"https://tools.haiyong.site/wp-content/uploads/2016/12/1481025911_Colours_CMYK.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHSV CMYK 转换工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/877/","img":"https://tools.haiyong.site/wp-content/uploads/2016/12/1481026587_Colours_RGB.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线二维码生成器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/3454/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2017/08/if_qrcode_173080.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线 Unicode 编码转换 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/3602/","img":"https://tools.haiyong.site/wp-content/uploads/2017/09/unicode_convert.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tIP 地址查询 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/5445/","img":"https://tools.haiyong.site/wp-content/uploads/2018/11/IPaddress_IP.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 取色器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/5449/","img":"https://tools.haiyong.site/wp-content/uploads/2018/11/3LkGs.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t汉字转拼音 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/5523/","img":"https://tools.haiyong.site/wp-content/uploads/2018/12/hzp.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t代码在线高亮 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/5536/","img":"https://tools.haiyong.site/wp-content/uploads/2019/02/iconfinder_Technology_Mix_-_Final-11_998692.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t长度单位换算 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/5575/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2019/05/length-unit.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线繁体字转换器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/5579/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2019/05/fan2jian.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线字数统计工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/5580/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2019/05/count-word.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t今日日期 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/5672/","img":"https://tools.haiyong.site/wp-content/uploads/2021/03/iconfinder_calendar_285670.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t取色器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6210/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2021/08/colorpicker11.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片取色器/拾色器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6214/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2021/09/color-picker-image.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tCSS 按钮生成器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6222/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2021/10/StandAloneButton.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPNG/JPEG 图片压缩 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6232/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/02/530-compress-jpeg-1.jpeg"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tASCII 表 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6318/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/03/ascii-logo.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t调色板 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6327/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/03/html-color-codes.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片加水印 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6502/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/sy-logo.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t颜色选择器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6656/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/color-select.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t随机数生成器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6680/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/26-266723_numbers.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线涂鸦画板 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6900/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/1814074_draw_edit_pencile_write_icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线计算器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/6904/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/2530794_accounting_calculate_calculation_calculator_general_icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJavaScript 混淆/加密 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/6939/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/4021438_code_lock_protect_security_shield_icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tpdf 转图片(jpg,png) \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/7271/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/pdf2image-logo.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t代码生成图片 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/7433/","img":"https://tools.haiyong.site/wp-content/uploads/2022/06/code2image.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线 JSON 解析 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/7438/","img":"https://tools.haiyong.site/wp-content/uploads/2022/06/4691282_json_icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片转PDF \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/7574/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/06/image2pdf.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t正则表达式可视化工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/7625/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/regex-image-logo.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJSON 转义/去除转义 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/7683/","img":"https://tools.haiyong.site/wp-content/uploads/2022/08/2993435_array_data_file_javascript_json_icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 表格生成器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://tools.haiyong.site/front-end/7688/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/307999_cell_table_icon.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线汇率换算器 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/7939/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/coins-conveter.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线文本比对工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/front-end/8006/","img":"https://tools.haiyong.site/wp-content/uploads/2022/10/9022487_git_diff_duotone_icon.png"}]
-    for (var i = 0 ; i < commonTools.length ; i++){
+<!--    实现页内搜索-->
+$(".searchButton").click(function () {
+    // 1.获取输入框的值
+    var searchValue = $(".input-text").val();
+    console.log(searchValue)
+//     获取所有的title信息，title的信息来自a标签的文本信息
+    var titleList = $(".title");
+    // 3.遍历titleList，获取每一个title的文本信息
+    for (var i = 0; i < titleList.length; i++) {
+        var title = titleList[i].innerText;
+    //     判断搜索框的信息是否能匹配到title的信息，能匹配则定位该元素的位置，然后滚动到该元素位置,忽略大小写
+        if (title.toLowerCase().indexOf(searchValue.toLowerCase()) != -1) {
+            titleList[i].scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+
+            })
+            break;
+        }
+    }
+})
+
+
+
+    const commonTools = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/47/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/html.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJS 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/51/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/js.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tCSS 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/52/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/css.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJSON 在线解析 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/53/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/json.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRGB转16进制工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/55/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/rgb.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线进制转换器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/58/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/binary.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片转 BASE64 编码 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/59/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/image2base64.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML/CSS/JS 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/61/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/htmlcssjs.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t随机密码生成器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/686/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/key.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 编码/解码 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/691/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/1473407898_Coding-Html.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tBase64 编码/解码 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/693/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/45920.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tURL 编码/解码 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/695/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/1473410242_url.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tSQL 格式化/压缩工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/701/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/sql_query-128.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tMD5 加密 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/703/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/md5.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tSHA 加密 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/706/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/olive-data-encryption-128.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tXML、JSON 在线转换 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/708/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/images.jpeg"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线 XML 格式化 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/710/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/iconfinder_application-xml_28904.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tMarkdown 在线编辑器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/712/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/09/markdown-icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 转 JavaScript 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/846/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/11/1480248614_Html.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tUNIX 时间戳转换 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/852/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/11/history-128.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t正则表达式在线测试 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/854/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/11/regular.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRGB HSV 转换 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/868/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/12/1481023129_HSV.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRGB CMYK 转换工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/870/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/12/1481023045_cmyk.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHEX CMYK 转换工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/873/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/12/1481024809_CMYK.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHEX HSV 转换工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/875/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/12/1481025911_Colours_CMYK.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHSV CMYK 转换工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/877/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/12/1481026587_Colours_RGB.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线二维码生成器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/3454/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2017/08/if_qrcode_173080.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线 Unicode 编码转换 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/3602/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2017/09/unicode_convert.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tIP 地址查询 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/5445/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2018/11/IPaddress_IP.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 取色器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/5449/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2018/11/3LkGs.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t汉字转拼音 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/5523/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2018/12/hzp.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t代码在线高亮 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/5536/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2019/02/iconfinder_Technology_Mix_-_Final-11_998692.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t长度单位换算 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/5575/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2019/05/length-unit.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线繁体字转换器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/5579/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2019/05/fan2jian.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线字数统计工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/5580/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2019/05/count-word.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t今日日期 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/5672/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2021/03/iconfinder_calendar_285670.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t取色器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6210/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2021/08/colorpicker11.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片取色器/拾色器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6214/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2021/09/color-picker-image.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tCSS 按钮生成器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6222/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2021/10/StandAloneButton.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPNG/JPEG 图片压缩 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6232/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/02/530-compress-jpeg-1.jpeg"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tASCII 表 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6318/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/ascii-logo.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t调色板 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6327/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/html-color-codes.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片加水印 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6502/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/sy-logo.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t颜色选择器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6656/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/color-select.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t随机数生成器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6680/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/26-266723_numbers.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线涂鸦画板 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6900/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/1814074_draw_edit_pencile_write_icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线计算器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/6904/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/2530794_accounting_calculate_calculation_calculator_general_icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJavaScript 混淆/加密 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/6939/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/4021438_code_lock_protect_security_shield_icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tpdf 转图片(jpg,png) \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/7271/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/pdf2image-logo.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t代码生成图片 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/7433/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/code2image.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线 JSON 解析 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/7438/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/4691282_json_icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t图片转PDF \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/7574/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/image2pdf.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t正则表达式可视化工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/7625/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/regex-image-logo.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJSON 转义/去除转义 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/7683/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/08/2993435_array_data_file_javascript_json_icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 表格生成器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://tools.haiyong.site/front-end/7688/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/307999_cell_table_icon.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线汇率换算器 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/7939/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/coins-conveter.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线文本比对工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/front-end/8006/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/10/9022487_git_diff_duotone_icon.png"
+    }]
+    for (var i = 0; i < commonTools.length; i++) {
         var li = document.createElement("li")
-        li.innerHTML = "<center><a href='"+commonTools[i].titleLink+"' target='_blank'><img src='"+commonTools[i].img+"' alt=''><br>"+commonTools[i].title+"</a></center>"
+        li.innerHTML = "<center><a href='" + commonTools[i].titleLink + "' target='_blank' class='title'><img src='" + commonTools[i].img + "' alt=''><br>" + commonTools[i].title + "</a></center>"
         document.getElementById("commonTools").appendChild(li);
     }
-    const compileTools = [{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPHP 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/1/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/php.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPython2 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/6/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/python.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPython3 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/9/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/python.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJava 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/10/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/java.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tC 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/11/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/c.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tC++ 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/12/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/cpp.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRuby 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/13/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/ruby.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tC# 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/14/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/csharp.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tScala 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/15/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/scala.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tErlang 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/16/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/iconfinder_115_Erlang_logo_logos_4373173.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPerl 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/17/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/perl.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tBash 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/18/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/bash.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRUST 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/19/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/iconfinder_rust_4691305.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tSwift 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/20/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/swift.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tGo 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/21/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/go.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tNode.js 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/22/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/node.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tLua 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/66/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/lua.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPascal 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/73/","img":"https://tools.haiyong.site/wp-content/uploads/2016/01/pascal.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tKotlin 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/2960/","img":"https://tools.haiyong.site/wp-content/uploads/2017/06/kotlin.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tTypeScript 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/5577/","img":"https://tools.haiyong.site/wp-content/uploads/2019/05/typescript.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tVB.NET 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/5648/","img":"https://tools.haiyong.site/wp-content/uploads/2020/05/iconfinder_Vb_program_programming_file_extension_3044873.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tR 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/5649/","img":"https://tools.haiyong.site/wp-content/uploads/2020/05/iconfinder_285_R_Project_4518765.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tAssembly 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/6206/","img":"https://tools.haiyong.site/wp-content/uploads/2021/08/general-assembly-logo.png"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tGroovy 在线工具 \n\t\t\t\t\t\t\t\t\t\t","titleLink":"https://c.runoob.com/compile/6208/","img":"https://tools.haiyong.site/wp-content/uploads/2021/08/Groovy.png"}]
-    for (var i = 0 ; i < compileTools.length ; i++){
+    const compileTools = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPHP 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/1/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/php.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPython2 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/6/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/python.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPython3 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/9/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/python.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tJava 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/10/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/java.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tC 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/11/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/c.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tC++ 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/12/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/cpp.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRuby 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/13/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/ruby.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tC# 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/14/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/csharp.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tScala 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/15/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/scala.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tErlang 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/16/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/iconfinder_115_Erlang_logo_logos_4373173.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPerl 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/17/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/perl.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tBash 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/18/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/bash.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tRUST 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/19/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/iconfinder_rust_4691305.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tSwift 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/20/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/swift.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tGo 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/21/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/go.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tNode.js 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/22/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/node.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tLua 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/66/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/lua.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tPascal 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/73/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/pascal.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tKotlin 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/2960/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2017/06/kotlin.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tTypeScript 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/5577/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2019/05/typescript.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tVB.NET 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/5648/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2020/05/iconfinder_Vb_program_programming_file_extension_3044873.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tR 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/5649/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2020/05/iconfinder_285_R_Project_4518765.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tAssembly 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/6206/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2021/08/general-assembly-logo.png"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tGroovy 在线工具 \n\t\t\t\t\t\t\t\t\t\t",
+        "titleLink": "https://c.runoob.com/compile/6208/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2021/08/Groovy.png"
+    }]
+    for (var i = 0; i < compileTools.length; i++) {
         var li = document.createElement("li")
-        li.innerHTML = "<center><a href='"+commonTools[i].titleLink+"' target='_blank'><img src='"+compileTools[i].img+"' alt=''><br>"+compileTools[i].title+"</a></center>"
+        li.innerHTML = "<center><a href='" + commonTools[i].titleLink + "' target='_blank' class='title'><img src='" + compileTools[i].img + "' alt=''><br>" + compileTools[i].title + "</a></center>"
         document.getElementById("compileTools").appendChild(li);
+    }
+    const technologyLearning = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tStack Overflow",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/14-e1647306997102.png",
+        "titleLink": "https://stackoverflow.com/search",
+        "description": " 大部分编程问题都能在这里找到答案。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t博客园",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/cnblogs-logo.png",
+        "titleLink": "https://www.cnblogs.com/",
+        "description": " 开发者的网上家园"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCSDN",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/csdn-logo.jpeg",
+        "titleLink": "https://www.csdn.net/",
+        "description": " 专业开发者社区"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t开源中国",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/%E5%BC%80%E6%BA%90%E4%B8%AD%E5%9B%BD.jpg",
+        "titleLink": "https://www.oschina.net/",
+        "description": " 中文开源技术交流社区"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSF思否",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/segmentfault.png",
+        "titleLink": "https://segmentfault.com/",
+        "description": " 一个开放的技术社区"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t掘金",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/%E6%8E%98%E9%87%91.png",
+        "titleLink": "https://juejin.cn/",
+        "description": " 代码不止，掘金不停"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t前端开发",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/532707_api_coding_developer_development_man_icon.png",
+        "titleLink": "https://tools.haiyong.site/web-developer/",
+        "description": " 中国领先的IT技术网站"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDEV Community",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/dev-logo.png",
+        "titleLink": "https://dev.to/",
+        "description": " 国外技术分享社区，技术分类比较多，包含 C、 Java、Python 等"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tInfoQ",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/infoq-logo.png",
+        "titleLink": "https://www.infoq.cn/",
+        "description": " 以社区为中心的技术媒体平台，致力于促进软件开发及相关领域知识与创新的传播"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tChinaUnix",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/china-unix.jpg",
+        "titleLink": "http://www.chinaunix.net/",
+        "description": " 专业的Linux/Unix应用与开发者社区，是IT人的网上家园"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t编程测验",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/quiz-icon.png",
+        "titleLink": "https://tools.haiyong.site/quiz/",
+        "description": " 包含各种语言在线测验题"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGo语言中文网",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/golang.jpg",
+        "titleLink": "https://studygolang.com/",
+        "description": " 中国Golang社区，是Go语言爱好者的学习家园"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tV2EX",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/v2ex-logo.png",
+        "titleLink": "http://www.v2ex.com/",
+        "description": " 一个汇集各类奇妙好玩的话题和流行动向的网站，V2EX提供特别有用的小工具『ZEN』,帮助你掌握自己的时间"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCNode",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/cnode.png",
+        "titleLink": "https://cnodejs.org/",
+        "description": " Node.js专业中文社区"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tLinux 公社",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/linuxidc-logo.png",
+        "titleLink": "https://www.linuxidc.com/",
+        "description": " Linux 系统门户网站，实时发布最新 Linux 资讯。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tMSDN",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/msdn-logo.png",
+        "titleLink": "https://docs.microsoft.com/zh-cn/documentation/",
+        "description": " 搜索有关 Microsoft 开发人员工具和技术的深度文章。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tdeveloperWork",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/develper.png",
+        "titleLink": "https://developer.ibm.com/",
+        "description": " IBM的官方开发者项目，在这里你可以访问和下载试用版软件，查找丰富的IT技术资源，和专业的IT从业人员交流"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t力扣",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/leetcode-logo.png",
+        "titleLink": "https://leetcode-cn.com/",
+        "description": " 刷题及面试资源，帮助你高效提升编程技能"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tReddit",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/reddit-logo.png",
+        "titleLink": "https://www.reddit.com/r/programming/",
+        "description": " 和世界各地的程序员探讨和交流技术问题或 IT 热点资讯。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tHacker News",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/hn-logo.png",
+        "titleLink": "https://news.ycombinator.com/",
+        "description": " 计算机黑客和创业公司的社会化新闻网站"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tFreeBuf",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/freebuf-logo.png",
+        "titleLink": "https://www.freebuf.com/",
+        "description": " 国内网络安全行业门户，适合相对资深的极客、黑客人群，以及网站安全类岗位的从业人员。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tW3School",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/w3-logo.png",
+        "titleLink": "https://www.w3school.com.cn/",
+        "description": " 包含了比较全面的中文 Web 技术教程"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t51CTO",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/51otc.jpg",
+        "titleLink": "https://www.51cto.com/",
+        "description": " 中国领先的IT技术网站"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDzone",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/dz-logo-v.svg",
+        "titleLink": "https://dzone.com/",
+        "description": " 技术涵盖比较全面的网站，像云平台、数据库、物联网、开发运维、Java 语言等都有。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t中国大学MOOC",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/mooc-logo.png",
+        "titleLink": "https://www.icourse163.org/",
+        "description": " 精品课程在线学习平台"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDevDocs",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/devdoc-logo.png",
+        "titleLink": "https://devdocs.io/",
+        "description": " 开源免费文档查询工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tMDN Web Docs",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/mdn-logo.png",
+        "titleLink": "https://developer.mozilla.org/zh-CN/",
+        "description": " Web 技术，包括 CSS、HTML 和 JavaScript"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tChatGPT",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/02/openai-avatar.png",
+        "titleLink": "https://chat-gpt-next-2xjpm2t58-hua123an.vercel.app",
+        "description": " 一款功能丰富、智能化、易用性强的人工智能工具，适用于各种内容创作者"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAlgorithms",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/03/logo_t.svg",
+        "titleLink": "https://the-algorithms.com/",
+        "description": " GitHub 最大的开源算法库"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t编程书籍",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/03/285636_book_icon.png",
+        "titleLink": "https://c.runoob.com/books/",
+        "description": " 各类编程书籍推荐"
+    }]
+    for (var i = 0; i < technologyLearning.length; i++) {
+        var li = document.createElement("li")
+        li.innerHTML = "<center><img src='" + technologyLearning[i].img + "' alt=''><a href='" + technologyLearning[i].titleLink + "' , target='_blank' class='title'>" + technologyLearning[i].title + "<p>" + technologyLearning[i].description + "</p></a></center>"
+        document.getElementById("technologyLearning").appendChild(li)
     }
 </script>
 <style>
     .container {
-        display: grid;
+        float: left;
     }
-    .nav{
+
+    .nav {
         margin-bottom: 20px;
     }
-    .nav a{
+
+    .nav a {
         width: auto;
         text-decoration: none;
         padding-left: 20px;
@@ -95,13 +611,14 @@
     li {
         list-style: none;
         float: left;
-        width: 140px;
-        height: 80px;
-        border: 1px solid #000;
+        width: 200px;
+        height: 160px;
+        border: 1px double #000;
         border-radius: 10px;
         margin: 10px;
         padding: 10px;
         justify-content: center;
+        background: antiquewhite;
     }
 
     li img {
