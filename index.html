@@ -18,6 +18,7 @@
             <nav class="nav">
                 <a href="index.html">首页</a>
                 <a href="AI.html">AI专区</a>
+                <a href="https://jha123link.wordpress.com/" target="_blank">博客</a>
             </nav>
         </div>
     </div>
@@ -25,14 +26,14 @@
     <div class="nav scroll bg-white shadow fixed-top">
         <nav class="nav nav-underline">
             <center>
-            <a href="#common" class="nav-link">常用工具</a>
-            <a href="#compile" class="nav-link">编译工具</a>
-            <a href="#technology" class="nav-link">技术学习</a>
-            <a href="#develop" class="nav-link">开发软件</a>
-            <a href="" class="nav-link">five</a>
-            <a href="" class="nav-link">six</a>
-            <a href="" class="nav-link">seven</a>
-            <a href="" class="nav-link">eight</a>
+                <a href="#common" class="nav-link">常用工具</a>
+                <a href="#compile" class="nav-link">编译工具</a>
+                <a href="#technology" class="nav-link">技术学习</a>
+                <a href="#develop" class="nav-link">开发软件</a>
+                <a href="#icon" class="nav-link">公共图标库</a>
+                <a href="#online" class="nav-link">在线工具</a>
+                <a href="#code" class="nav-link">代码托管</a>
+                <a href="" class="nav-link">eight</a>
             </center>
         </nav>
     </div>
@@ -55,35 +56,42 @@
         <div class="indexGroup" id="develop" data-text="开发软件">
             <div id="developSoftware" class="index">开发软件<br></div>
         </div>
+        <div class="indexGroup" id="icon" data-text="公共图标库">
+            <div id="publicIcon" class="index">公共图标库<br></div>
+        </div>
+        <div class="indexGroup" id="online" data-text="在线工具">
+            <div id="onlineTools" class="index">在线工具<br></div>
+        </div>
+        <div class="indexGroup" id="code" data-text="代码托管">
+            <div id="codeManager" class="index">代码托管<br></div>
+        </div>
 
 
-        <a href=""></a>
     </div>
 
 </div>
 <script>
-<!--    实现页内搜索-->
-$(".searchButton").click(function () {
-    // 1.获取输入框的值
-    var searchValue = $(".input-text").val();
-    console.log(searchValue)
+    <!--    实现页内搜索-->
+    $(".searchButton").click(function () {
+        // 1.获取输入框的值
+        var searchValue = $(".input-text").val();
+        console.log(searchValue)
 //     获取所有的title信息，title的信息来自a标签的文本信息
-    var titleList = $(".title");
-    // 3.遍历titleList，获取每一个title的文本信息
-    for (var i = 0; i < titleList.length; i++) {
-        var title = titleList[i].innerText;
-    //     判断搜索框的信息是否能匹配到title的信息，能匹配则定位该元素的位置，然后滚动到该元素位置,忽略大小写
-        if (title.toLowerCase().indexOf(searchValue.toLowerCase()) != -1) {
-            titleList[i].scrollIntoView({
-                behavior: "smooth",
-                block: "center",
+        var titleList = $(".title");
+        // 3.遍历titleList，获取每一个title的文本信息
+        for (var i = 0; i < titleList.length; i++) {
+            var title = titleList[i].innerText;
+            //     判断搜索框的信息是否能匹配到title的信息，能匹配则定位该元素的位置，然后滚动到该元素位置,忽略大小写
+            if (title.toLowerCase().indexOf(searchValue.toLowerCase()) != -1) {
+                titleList[i].scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
 
-            })
-            break;
+                })
+                break;
+            }
         }
-    }
-})
-
+    })
 
 
     const commonTools = [{
@@ -578,11 +586,384 @@ $(".searchButton").click(function () {
         li.innerHTML = "<center><img src='" + technologyLearning[i].img + "' alt=''><a href='" + technologyLearning[i].titleLink + "' , target='_blank' class='title'>" + technologyLearning[i].title + "<p>" + technologyLearning[i].description + "</p></a></center>"
         document.getElementById("technologyLearning").appendChild(li)
     }
-    const developSoftware = [{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t软件下载中心","titleLink":"https://pc.qq.com/category/c13.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/ruanjianxiazai.jpg","description":" 腾讯编程软件下载中心推荐2022年最新编程软件高速免费下载，提供多维度编程软件排行榜和编程哪个好等参考信息。全部软件都已经过安全杀毒检测，安全放心。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tVS Code","titleLink":"https://code.visualstudio.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/vs-code.jpg","description":" 微软开发且跨平台的免费源代码编辑器，很好用"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tIntelliJ IDEA","titleLink":"https://www.jetbrains.com/idea/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/intellij.png","description":" 好用的 Java 编程工具，要付钱"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPuTTY","titleLink":"https://www.putty.org/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/putty-logo.png","description":" 远程连接 Linux 工具，开源免费"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSublime Text","titleLink":"https://www.sublimetext.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/sublime-text.jpg","description":" 跨平台代码编辑器，挺好用"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tsecureCRT&FX","titleLink":"https://www.vandyke.com/download/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/vandyke.jpg","description":" 超好用的 FTP、SSH 连接工具"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tNavicat","titleLink":"https://www.navicat.com.cn/download/navicat-premium","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/navicat.jpg","description":" 数据库管理工具，用以管理 MySQL、Oracle、PostgreSQL、SQLite、SQL Server、MariaDB 和/或 MongoDB\n\t\t\t\t\t\t\t\t\t\t\t\t等不同类型的数据库。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPostman","titleLink":"https://www.postman.com/downloads/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/postman.jpg","description":" 接口调试与测试工具，提供功能强大的 Web API & HTTP 请求调试。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t宝塔","titleLink":"https://www.bt.cn/new/index.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/bt_logo_new.png","description":" 简单好用的 Linux/Windows 服务器运维管理面板"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tEclipse","titleLink":"https://www.eclipse.org/downloads/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/eclipse.jpg","description":" 是著名的跨平台的自由集成开发环境（IDE）,Eclipse集成了重构的工具，使得代码的优化变得尤为简单."},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAtom","titleLink":"https://atom.io/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/atom.jpg","description":" Github 专门为程序员推出的一个跨平台文本编辑器。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tWebStorm","titleLink":"https://www.jetbrains.com/webstorm/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/webstorm.jpg","description":" 适用于 Web、JavaScript 的集成开发环境。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPyCharm","titleLink":"https://www.jetbrains.com/pycharm/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/pycharm.jpg","description":" Python IDE，提高 Python 语言开发效率。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAndroid Studio","titleLink":"https://developer.android.com/studio","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/android.jpg","description":" 谷歌推出的一个 Android 集成开发工具"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDataGrip","titleLink":"https://www.jetbrains.com/datagrip/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/datagrip.jpg","description":" JetBrains旗下的一款数据库管理工具"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDBeaver","titleLink":"https://dbeaver.io/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/dbeaver.jpg","description":" 免费和开源（GPL）为开发人员和数据库管理员通用数据库工具。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tStudio 3T","titleLink":"https://studio3t.com/download/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/studio-3t.jpg","description":" 是一款十分优秀的数据库管理软件,该软件拥有业界顶尖的图形化操作界面,内置了先进的聚合编辑器,能够帮助用户高效率地完成数据库编辑管理."},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tRedis Desktop Manager","titleLink":"https://resp.app/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/redis.jpg","description":" 是目前最好用的Redis可视化管理工具."},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAnother Redis Desktop Manager","titleLink":"https://github.com/qishibo/AnotherRedisDesktopManager","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/another.jpg","description":" 开源免费的 Redis 可视化管理工具"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tFiddler","titleLink":"https://www.telerik.com/download/fiddler","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/fiddle.jpg","description":" 强大的抓包工具，Web 调试工具，能记录客户端和服务器的 http/https 请求，允许你监视，设置断点，甚至修改输入输出数据。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tEditPlus","titleLink":"https://www.editplus.com/download.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/editplus.png","description":" 一款小巧的但是功能强大的代码编辑器。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tBeyond Compare","titleLink":"https://www.scootersoftware.com/download.php","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/beyond.jpg","description":" 专业且好用的文件对比软件"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tFinalShell","titleLink":"https://www.hostbuf.com/t/988.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/shell-logo.png","description":" 是一体化的的服务器，网络管理软件，不仅是ssh客户端,还是功能强大的开发，运维工具，充分满足开发，运维需求。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSnipPaste","titleLink":"https://www.snipaste.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/Snipaste.png","description":" 是一款非常高效的屏幕截图软件。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPotPlayer","titleLink":"https://pc.qq.com/detail/14/detail_15654.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/potplayer.jpg","description":" 一款非常专业的视频播放器,PotPlayer软件自带专业的编解码器，方便快捷，一同安装后可观看任何格式视频文件，功能非常强大."},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tChiner","titleLink":"https://gitee.com/robergroup/chiner","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/gitee.jpg","description":" 一款丰富数据库生态，独立于具体数据库之外的，数据库关系模型设计平台."},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tMac 软件下载","titleLink":"https://www.macwk.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/macwk-logo.png","description":" 提供很多精品Mac软件下载"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tVagrant","titleLink":"https://www.vagrantup.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/vagrant_logo.png","description":" 创建和部署虚拟化开发环境"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tVirtualBox","titleLink":"https://www.virtualbox.org/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/VirtualBox.png","description":" 开源虚拟机软件"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitHub Desktop","titleLink":"https://desktop.github.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/githubdesktop.jpeg","description":" Github 官方的 Git 界面操作"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tKangaroo","titleLink":"https://www.datatable.online/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/kangaroo.svg","description":" 流行数据库的 SQL 客户端和管理工具"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tHeidiSQL","titleLink":"https://www.heidisql.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/HeidiSQL-1.jpg","description":" 是MariaDB、MySQL、Microsoft SQL Server、PostgreSQL和SQLite的免费且功能强大的客户端"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\ttableplus","titleLink":"https://tableplus.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/tableplus.png","description":" 用于数据库管理的现代本地工具"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tsequelpro","titleLink":"https://sequelpro.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/09/sequel.png","description":" 是一个快速、易于使用的Mac数据库管理应用程序，用于处理MySQL数据库。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCursor","titleLink":"https://www.cursor.so/","img":"https://tools.haiyong.site/wp-content/uploads/2023/03/f1a6cd24acefcc687dea963158cdc42e.png","description":" 使用 GPT-4 编写代码"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCopilot X","titleLink":"https://github.com/features/preview/copilot-x","img":"https://tools.haiyong.site/wp-content/uploads/2023/03/copilot-x.png","description":" GitHub 和 OpenAI 合作开发的一个代码自动生成工具"}]
-    for (var i = 0 ; i < developSoftware.length ; i++){
+    const developSoftware = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t软件下载中心",
+        "titleLink": "https://pc.qq.com/category/c13.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/ruanjianxiazai.jpg",
+        "description": " 腾讯编程软件下载中心推荐2022年最新编程软件高速免费下载，提供多维度编程软件排行榜和编程哪个好等参考信息。全部软件都已经过安全杀毒检测，安全放心。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tVS Code",
+        "titleLink": "https://code.visualstudio.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/vs-code.jpg",
+        "description": " 微软开发且跨平台的免费源代码编辑器，很好用"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tIntelliJ IDEA",
+        "titleLink": "https://www.jetbrains.com/idea/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/intellij.png",
+        "description": " 好用的 Java 编程工具，要付钱"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPuTTY",
+        "titleLink": "https://www.putty.org/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/putty-logo.png",
+        "description": " 远程连接 Linux 工具，开源免费"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSublime Text",
+        "titleLink": "https://www.sublimetext.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/sublime-text.jpg",
+        "description": " 跨平台代码编辑器，挺好用"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tsecureCRT&FX",
+        "titleLink": "https://www.vandyke.com/download/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/vandyke.jpg",
+        "description": " 超好用的 FTP、SSH 连接工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tNavicat",
+        "titleLink": "https://www.navicat.com.cn/download/navicat-premium",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/navicat.jpg",
+        "description": " 数据库管理工具，用以管理 MySQL、Oracle、PostgreSQL、SQLite、SQL Server、MariaDB 和/或 MongoDB\n\t\t\t\t\t\t\t\t\t\t\t\t等不同类型的数据库。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPostman",
+        "titleLink": "https://www.postman.com/downloads/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/postman.jpg",
+        "description": " 接口调试与测试工具，提供功能强大的 Web API & HTTP 请求调试。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t宝塔",
+        "titleLink": "https://www.bt.cn/new/index.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/bt_logo_new.png",
+        "description": " 简单好用的 Linux/Windows 服务器运维管理面板"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tEclipse",
+        "titleLink": "https://www.eclipse.org/downloads/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/eclipse.jpg",
+        "description": " 是著名的跨平台的自由集成开发环境（IDE）,Eclipse集成了重构的工具，使得代码的优化变得尤为简单."
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAtom",
+        "titleLink": "https://atom.io/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/atom.jpg",
+        "description": " Github 专门为程序员推出的一个跨平台文本编辑器。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tWebStorm",
+        "titleLink": "https://www.jetbrains.com/webstorm/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/webstorm.jpg",
+        "description": " 适用于 Web、JavaScript 的集成开发环境。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPyCharm",
+        "titleLink": "https://www.jetbrains.com/pycharm/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/pycharm.jpg",
+        "description": " Python IDE，提高 Python 语言开发效率。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAndroid Studio",
+        "titleLink": "https://developer.android.com/studio",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/android.jpg",
+        "description": " 谷歌推出的一个 Android 集成开发工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDataGrip",
+        "titleLink": "https://www.jetbrains.com/datagrip/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/datagrip.jpg",
+        "description": " JetBrains旗下的一款数据库管理工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDBeaver",
+        "titleLink": "https://dbeaver.io/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/dbeaver.jpg",
+        "description": " 免费和开源（GPL）为开发人员和数据库管理员通用数据库工具。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tStudio 3T",
+        "titleLink": "https://studio3t.com/download/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/studio-3t.jpg",
+        "description": " 是一款十分优秀的数据库管理软件,该软件拥有业界顶尖的图形化操作界面,内置了先进的聚合编辑器,能够帮助用户高效率地完成数据库编辑管理."
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tRedis Desktop Manager",
+        "titleLink": "https://resp.app/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/redis.jpg",
+        "description": " 是目前最好用的Redis可视化管理工具."
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tAnother Redis Desktop Manager",
+        "titleLink": "https://github.com/qishibo/AnotherRedisDesktopManager",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/another.jpg",
+        "description": " 开源免费的 Redis 可视化管理工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tFiddler",
+        "titleLink": "https://www.telerik.com/download/fiddler",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/fiddle.jpg",
+        "description": " 强大的抓包工具，Web 调试工具，能记录客户端和服务器的 http/https 请求，允许你监视，设置断点，甚至修改输入输出数据。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tEditPlus",
+        "titleLink": "https://www.editplus.com/download.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/editplus.png",
+        "description": " 一款小巧的但是功能强大的代码编辑器。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tBeyond Compare",
+        "titleLink": "https://www.scootersoftware.com/download.php",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/beyond.jpg",
+        "description": " 专业且好用的文件对比软件"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tFinalShell",
+        "titleLink": "https://www.hostbuf.com/t/988.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/shell-logo.png",
+        "description": " 是一体化的的服务器，网络管理软件，不仅是ssh客户端,还是功能强大的开发，运维工具，充分满足开发，运维需求。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSnipPaste",
+        "titleLink": "https://www.snipaste.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/Snipaste.png",
+        "description": " 是一款非常高效的屏幕截图软件。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPotPlayer",
+        "titleLink": "https://pc.qq.com/detail/14/detail_15654.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/potplayer.jpg",
+        "description": " 一款非常专业的视频播放器,PotPlayer软件自带专业的编解码器，方便快捷，一同安装后可观看任何格式视频文件，功能非常强大."
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tChiner",
+        "titleLink": "https://gitee.com/robergroup/chiner",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/gitee.jpg",
+        "description": " 一款丰富数据库生态，独立于具体数据库之外的，数据库关系模型设计平台."
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tMac 软件下载",
+        "titleLink": "https://www.macwk.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/macwk-logo.png",
+        "description": " 提供很多精品Mac软件下载"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tVagrant",
+        "titleLink": "https://www.vagrantup.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/vagrant_logo.png",
+        "description": " 创建和部署虚拟化开发环境"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tVirtualBox",
+        "titleLink": "https://www.virtualbox.org/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/VirtualBox.png",
+        "description": " 开源虚拟机软件"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitHub Desktop",
+        "titleLink": "https://desktop.github.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/githubdesktop.jpeg",
+        "description": " Github 官方的 Git 界面操作"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tKangaroo",
+        "titleLink": "https://www.datatable.online/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/kangaroo.svg",
+        "description": " 流行数据库的 SQL 客户端和管理工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tHeidiSQL",
+        "titleLink": "https://www.heidisql.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/HeidiSQL-1.jpg",
+        "description": " 是MariaDB、MySQL、Microsoft SQL Server、PostgreSQL和SQLite的免费且功能强大的客户端"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\ttableplus",
+        "titleLink": "https://tableplus.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/tableplus.png",
+        "description": " 用于数据库管理的现代本地工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tsequelpro",
+        "titleLink": "https://sequelpro.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/09/sequel.png",
+        "description": " 是一个快速、易于使用的Mac数据库管理应用程序，用于处理MySQL数据库。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCursor",
+        "titleLink": "https://www.cursor.so/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/03/f1a6cd24acefcc687dea963158cdc42e.png",
+        "description": " 使用 GPT-4 编写代码"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCopilot X",
+        "titleLink": "https://github.com/features/preview/copilot-x",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/03/copilot-x.png",
+        "description": " GitHub 和 OpenAI 合作开发的一个代码自动生成工具"
+    }]
+    for (var i = 0; i < developSoftware.length; i++) {
         var li = document.createElement("li")
         li.innerHTML = "<center><img src='" + developSoftware[i].img + "' alt=''><a href='" + developSoftware[i].titleLink + "' , target='_blank' class='title'>" + developSoftware[i].title + "<p>" + developSoftware[i].description + "</p></a></center>"
         document.getElementById("developSoftware").appendChild(li)
+    }
+    const publicIcon = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tStaticfile CDN",
+        "titleLink": "https://www.staticfile.org/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/staticfile-logo.png",
+        "description": " 提供免费、快速、开放的 CDN 服务，也提供开源库源接入的入口，让所有人都可以提交开源库。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tcdnjs",
+        "titleLink": "https://cdnjs.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/csdnjs-logo.png",
+        "description": " 是一个通过快速 CDN 基础设施为开发人员和组织提供流行的前端 Web 开发资源的项目，帮助代码库与框架开发者分发他们的项目。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t微软CDN",
+        "titleLink": "https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/%E5%BE%AE%E8%BD%AFCDN.png",
+        "description": " 微软公司提供的公共CDN服务。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tjsDelivr",
+        "titleLink": "https://www.jsdelivr.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/jsdelivr.jpg",
+        "description": " 免费开源的 CDN 解决方案，用于帮助开发者和站长。包含 JavaScript 库、jQuery 插件、CSS 框架、字体等等 Web 上常用的静态资源。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tjQuery CDN",
+        "titleLink": "https://releases.jquery.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/jQuery%E4%B9%8B%E5%AE%B6.jpg",
+        "description": " jQuery 官网提供的 CDN 服务"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t阿里图标库",
+        "titleLink": "https://www.iconfont.cn/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/%E9%98%BF%E9%87%8C%E5%9B%BE%E6%A0%87%E5%BA%93.png",
+        "description": " 国内功能很强大且图标内容很丰富的矢量图标库"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t矢量 logo下载",
+        "titleLink": "https://worldvectorlogo.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/%E7%9F%A2%E9%87%8Flogo.jpg",
+        "description": " 知名 logo 矢量资源下载"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tUNPKG",
+        "titleLink": "https://unpkg.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/unpkg.jpg",
+        "description": " 前端 CDN 库，适用于 npm 上的所有内容。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tFont Awesome",
+        "titleLink": "https://fontawesome.com/icons",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/fontawesome.jpg",
+        "description": " 一套绝佳的图标字体库和CSS框架"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tIcoMoon",
+        "titleLink": "https://icomoon.io/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/icomoon.jpg",
+        "description": " 免费的开源字体图标库"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tpictonic",
+        "titleLink": "https://pictonic.co/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/pictonic.jpg",
+        "description": " 国外一个有362个免费字体图标库"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tMFG labs icon set",
+        "titleLink": "http://mfglabs.github.io/mfglabs-iconset/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/MFG.png",
+        "description": " 免费字体图标库"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tLigature Symbols",
+        "titleLink": "https://c.runoob.com/more/LigatureSymbols/site/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/ligature-symbols.png",
+        "description": " 免费字体图标库"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tBootstrap Icons",
+        "titleLink": "https://icons.getbootstrap.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/Bootstrap-Icons.png",
+        "description": " 专门为著名的前端开发 UI 框架 Bootstrap 的组件和文档定制开发的图标库"
+    }]
+    for (var i = 0; i < publicIcon.length; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = "<center><img src='" + publicIcon[i].img + "' alt=''><a href='" + publicIcon[i].titleLink + "' , target='_blank' class='title'>" + publicIcon[i].title + "<p>" + publicIcon[i].description + "</p></a></center>"
+        document.getElementById("publicIcon").appendChild(li)
+    }
+    const onlineTools = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tRegExr",
+        "titleLink": "https://regexr.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/regexrcom-logo.png",
+        "description": " 正则表达式在线测试工具。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t在线编译工具",
+        "titleLink": "https://ide.judge0.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/judge-logo.jpg",
+        "description": " 可以在线执行编程语言与 SQL 语句"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\trextester",
+        "titleLink": "https://rextester.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/rextester.png",
+        "description": " 在线执行 PHP、Python、C、Java 等各种语言代码。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tIdeone",
+        "titleLink": "https://ideone.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/g7o8ow0dockrtsdxym8m.webp",
+        "description": " 在线执行 PHP、Python、C、Java 等各种语言代码。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGDB online Debugger",
+        "titleLink": "https://www.onlinegdb.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/GDB1.png",
+        "description": " 在线执行 PHP、Python、C、Java 等各种语言代码。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tJSFiddle",
+        "titleLink": "https://jsfiddle.net/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/JSF.jpg",
+        "description": " 前端代码在线执行工具。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCodePen",
+        "titleLink": "https://codepen.io/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/codepen-512.png",
+        "description": " 前端代码在线执行工具。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tJSON 解析器",
+        "titleLink": "https://c.runoob.com/front-end/53",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/03/json.png",
+        "description": " 在线 JSON 工具，可以格式化 JSON 数据。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tRedis 在线测试",
+        "titleLink": "https://try.redis.io/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/redis-logo.png",
+        "description": " Redis 命令在线测试工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tPaiza",
+        "titleLink": "https://paiza.io/en?locale=en-us",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/paiza.png",
+        "description": " 在线编译工具，包含Python、Java、MySQL 等。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tLearn Git Branching",
+        "titleLink": "https://learngitbranching.js.org/?locale=zh_CN",
+        "img": "https://static.runoob.com/images/svg/logo-git.svg",
+        "description": " Git 学习命令，可以动画演示命令执行过程"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tJS Bin",
+        "titleLink": "https://jsbin.com/?html,output",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/js-bin.png",
+        "description": " 前端代码在线执行工具。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t正则可视化工具",
+        "titleLink": "https://c.runoob.com/codedemo/7625/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/regex-image-logo.png",
+        "description": " 将正则表达式转化成可视化图片"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t代码转图片工具",
+        "titleLink": "https://carbon.now.sh/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/carbon-logo.png",
+        "description": " 代码转为图片，代码美化"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t算法可视化学习",
+        "titleLink": "https://visualgo.net/zh",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/visualgo-logo.jpeg",
+        "description": " 各种算法可视化，让算法更直观，学起来不那么枯燥。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tasciiflow",
+        "titleLink": "https://asciiflow.com/#/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/asciiflow.png",
+        "description": " 一款通过 ASCII 编码来绘制图表的在线工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tcodelf",
+        "titleLink": "https://unbug.github.io/codelf/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/codelf.png",
+        "description": " 变量命名神器"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tDesmos",
+        "titleLink": "https://www.desmos.com/calculator?lang=zh-CN",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/desmos.jpg",
+        "description": " 免费的在线函数图形计算器"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSQL OnLine IDE",
+        "titleLink": "https://sqliteonline.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/07/315102_sql_file_icon.png",
+        "description": " SQL 在线执行测试工具，支持 SQLite、Oracle、MariaDB等各种数据。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tregex101",
+        "titleLink": "https://regex101.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/03/regex101.png",
+        "description": " 正则表达式在线测试学习工具"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCodex",
+        "titleLink": "https://chat-gpt-next-2xjpm2t58-hua123an.vercel.app/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/02/openai-avatar.png",
+        "description": " AI 代码生成，通过输入需求生成对应各种语言的代码"
+    }]
+    for (var i = 0; i < onlineTools.length; i++) {
+        var li = document.createElement("li")
+        li.innerHTML = "<center><img src='" + onlineTools[i].img + "' alt=''><a href='" + onlineTools[i].titleLink + "' , target='_blank' class='title'>" + onlineTools[i].title + "<p>" + onlineTools[i].description + "</p></a></center>"
+        document.getElementById("onlineTools").appendChild(li)
+    }
+    const codeManager = [{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitHub","titleLink":"https://github.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/github.png","description":" 是一个面向开源及私有软件项目的托管平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t1024code","titleLink":"https://1024code.com/","img":"https://tools.haiyong.site/wp-content/uploads/2023/07/icon-32x32.png","description":" 用1024Code, 让编程重回乐趣"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCoding","titleLink":"https://coding.net/products/repo","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/coding-1.png","description":" 一站式软件研发管理平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t码云","titleLink":"https://gitee.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/mayun_logo.png","description":" 基于 Git 的代码托管和研发协作平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tBitbucket","titleLink":"https://bitbucket.org/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/Bitbucket.jpg","description":" 为团队提供了一个规划项目、协作编写代码、测试和部署的场所"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitLab","titleLink":"https://about.gitlab.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/gitlab.jpg","description":" 一个DevOps平台，一个方便软件开发的强大完整应用"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitshell","titleLink":"https://gitshell.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/Gitshell.png","description":" 稳定、快速的Git代码托管服务"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSvn China","titleLink":"http://www.svnchina.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/svn.png","description":" 中国源代码托管中心，支持Subversion权限管理、版本管理、修订纪录订阅、SVN库备份导入导出等功能"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t云效代码管理Codeup","titleLink":"https://codeup.aliyun.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/codeup-logo.png","description":" 阿里云出品的一款企业级代码管理平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t腾讯工蜂","titleLink":"https://git.code.tencent.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/C05522D8-1582-4522-A41E-410EB8696421.jpeg","description":" 腾讯家的代码托管服务"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSourcetree","titleLink":"https://www.runoob.com/git/source-tree-intro.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/06/4375088_logo_sourcetree_icon.png","description":" Git 客户端管理工具，适用于 Windows 和 Mac 系统。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCodeberg","titleLink":"https://codeberg.org/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/codeberg-logo.jpeg","description":" 协作平台和 git 托管"}]
+    for (var i = 0 ; i < codeManager.length ; i++){
+        var li = document.createElement("li")
+        li.innerHTML = "<center><img src='" + codeManager[i].img + "' alt=''><a href='" + codeManager[i].titleLink + "' , target='_blank' class='title'>" + codeManager[i].title + "<p>" + codeManager[i].description + "</p></a></center>"
+        document.getElementById("codeManager").appendChild(li)
     }
 </script>
 <style>
