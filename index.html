@@ -959,8 +959,68 @@
         li.innerHTML = "<center><img src='" + onlineTools[i].img + "' alt=''><a href='" + onlineTools[i].titleLink + "' , target='_blank' class='title'>" + onlineTools[i].title + "<p>" + onlineTools[i].description + "</p></a></center>"
         document.getElementById("onlineTools").appendChild(li)
     }
-    const codeManager = [{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitHub","titleLink":"https://github.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/github.png","description":" 是一个面向开源及私有软件项目的托管平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t1024code","titleLink":"https://1024code.com/","img":"https://tools.haiyong.site/wp-content/uploads/2023/07/icon-32x32.png","description":" 用1024Code, 让编程重回乐趣"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCoding","titleLink":"https://coding.net/products/repo","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/coding-1.png","description":" 一站式软件研发管理平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t码云","titleLink":"https://gitee.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/mayun_logo.png","description":" 基于 Git 的代码托管和研发协作平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tBitbucket","titleLink":"https://bitbucket.org/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/Bitbucket.jpg","description":" 为团队提供了一个规划项目、协作编写代码、测试和部署的场所"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitLab","titleLink":"https://about.gitlab.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/gitlab.jpg","description":" 一个DevOps平台，一个方便软件开发的强大完整应用"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitshell","titleLink":"https://gitshell.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/Gitshell.png","description":" 稳定、快速的Git代码托管服务"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSvn China","titleLink":"http://www.svnchina.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/04/svn.png","description":" 中国源代码托管中心，支持Subversion权限管理、版本管理、修订纪录订阅、SVN库备份导入导出等功能"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t云效代码管理Codeup","titleLink":"https://codeup.aliyun.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/codeup-logo.png","description":" 阿里云出品的一款企业级代码管理平台"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t腾讯工蜂","titleLink":"https://git.code.tencent.com/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/C05522D8-1582-4522-A41E-410EB8696421.jpeg","description":" 腾讯家的代码托管服务"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSourcetree","titleLink":"https://www.runoob.com/git/source-tree-intro.html","img":"https://tools.haiyong.site/wp-content/uploads/2022/06/4375088_logo_sourcetree_icon.png","description":" Git 客户端管理工具，适用于 Windows 和 Mac 系统。"},{"title":"\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCodeberg","titleLink":"https://codeberg.org/","img":"https://tools.haiyong.site/wp-content/uploads/2022/05/codeberg-logo.jpeg","description":" 协作平台和 git 托管"}]
-    for (var i = 0 ; i < codeManager.length ; i++){
+    const codeManager = [{
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitHub",
+        "titleLink": "https://github.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/github.png",
+        "description": " 是一个面向开源及私有软件项目的托管平台"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t1024code",
+        "titleLink": "https://1024code.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2023/07/icon-32x32.png",
+        "description": " 用1024Code, 让编程重回乐趣"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCoding",
+        "titleLink": "https://coding.net/products/repo",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/coding-1.png",
+        "description": " 一站式软件研发管理平台"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t码云",
+        "titleLink": "https://gitee.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/mayun_logo.png",
+        "description": " 基于 Git 的代码托管和研发协作平台"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tBitbucket",
+        "titleLink": "https://bitbucket.org/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/Bitbucket.jpg",
+        "description": " 为团队提供了一个规划项目、协作编写代码、测试和部署的场所"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitLab",
+        "titleLink": "https://about.gitlab.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/gitlab.jpg",
+        "description": " 一个DevOps平台，一个方便软件开发的强大完整应用"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tGitshell",
+        "titleLink": "https://gitshell.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/Gitshell.png",
+        "description": " 稳定、快速的Git代码托管服务"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSvn China",
+        "titleLink": "http://www.svnchina.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/svn.png",
+        "description": " 中国源代码托管中心，支持Subversion权限管理、版本管理、修订纪录订阅、SVN库备份导入导出等功能"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t云效代码管理Codeup",
+        "titleLink": "https://codeup.aliyun.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/codeup-logo.png",
+        "description": " 阿里云出品的一款企业级代码管理平台"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t腾讯工蜂",
+        "titleLink": "https://git.code.tencent.com/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/C05522D8-1582-4522-A41E-410EB8696421.jpeg",
+        "description": " 腾讯家的代码托管服务"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tSourcetree",
+        "titleLink": "https://www.runoob.com/git/source-tree-intro.html",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/06/4375088_logo_sourcetree_icon.png",
+        "description": " Git 客户端管理工具，适用于 Windows 和 Mac 系统。"
+    }, {
+        "title": "\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\tCodeberg",
+        "titleLink": "https://codeberg.org/",
+        "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/codeberg-logo.jpeg",
+        "description": " 协作平台和 git 托管"
+    }]
+    for (var i = 0; i < codeManager.length; i++) {
         var li = document.createElement("li")
         li.innerHTML = "<center><img src='" + codeManager[i].img + "' alt=''><a href='" + codeManager[i].titleLink + "' , target='_blank' class='title'>" + codeManager[i].title + "<p>" + codeManager[i].description + "</p></a></center>"
         document.getElementById("codeManager").appendChild(li)
