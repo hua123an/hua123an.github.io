@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>software</title>
+    <script src="code.jquery.com_jquery-3.7.0.js"></script>
+</head>
+<body>
+<div class="home-main">
+
+    <div class="topNav fix-top">
+        <div class="nav scroll bg-white shadow fixed-top">
+            <nav class="nav">
+                <a href="#">首页</a>
+                <a href="AI.html">AI专区</a>
+                <a href="https://jha123link.wordpress.com/" target="_blank">博客</a>
+                <a href="Academic.html">学术专区</a>
+                <a href="Programming.html">前端开发</a>
+                <a href="upgrade.html">大学生专区</a>
+                <a href="software.html">资源下载</a>
+            </nav>
+        </div>
+        <div class="nav scroll bg-white shadow fixed-top">
+            <nav class="nav nav-underline">
+                <center>
+                    <a href="#develop">开发工具</a>
+                    <a href="#system">系统下载</a>
+                </center>
+            </nav>
+        </div>
+    </div>
+    <div class="container" style="max-width: 1600px">
+        <center>
+            <div class="siteSearch">
+                <input type="text" placeholder="站内搜素" class="input-text">
+                <button class="searchButton">站内搜索</button>
+            </div>
+        </center>
+        <div id="develop" class="softwareGroup" data-text="开发工具">
+            <div id="developTools" class="software">开发工具<br></div>
+        </div>
+        <div id="system" class="softwareGroup" data-text="系统下载">
+            <div id="systemDownload" class="software">系统下载<br></div>
+        </div>
+
+    </div>
+</div>
+<script>
+    <!--    实现页内搜索-->
+    $(".searchButton").click(function () {
+        // 1.获取输入框的值
+        var searchValue = $(".input-text").val();
+        console.log(searchValue)
+//     获取所有的title信息，title的信息来自a标签的文本信息
+        var titleList = $(".title");
+        // 3.遍历titleList，获取每一个title的文本信息
+        for (var i = 0; i < titleList.length; i++) {
+            var title = titleList[i].innerText;
+            //     判断搜索框的信息是否能匹配到title的信息，能匹配则定位该元素的位置，然后滚动到该元素位置,忽略大小写
+            if (title.toLowerCase().indexOf(searchValue.toLowerCase()) != -1) {
+                titleList[i].scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+
+                })
+                break;
+            }
+        }
+    })
+    const developTools = [{
+        "title" : "IntelliJ IDEA",
+        "titleLink" : "https://www.jetbrains.com/idea/",
+        "img" : "/img/idea.ico",
+        "description" : "jetbrains公司出品的java开发工具，支持java、kotlin、groovy、scala、android、maven、gradle、git、svn等多种语言开发"
+    },{
+        "title" : "PyCharm",
+        "titleLink" : "https://www.jetbrains.com/pycharm/",
+        "img" : "/img/pycharm.ico",
+        "description" : "jetbrains公司出品的python开发工具，也是市面上兼容python程度最高的开发工具"
+    },
+        {
+            "title" : "WebStorm",
+            "titleLink" : "https://www.jetbrains.com/webstorm/",
+            "img" : "/img/webstorm.ico",
+            "description" : "jetbrains公司出品的web开发工具，支持市面上绝大多数js框架"
+        },
+        {
+            "title" : "DataGrip",
+            "titleLink" : "https://www.jetbrains.com/datagrip/",
+            "img" : "/img/datagrip.ico",
+            "description" : "jetbrains公司出品的数据库开发工具，支持MySQL、Oracle、SQL Server、PostgreSQL、SQLite、MariaDB、MongoDB、Redis等多种数据库"
+        },
+        {
+            "title" : "Clion",
+            "titleLink" : "https://www.jetbrains.com/clion/",
+            "img" : "/img/clion.ico",
+            "description" : "jetbrains公司出品的c程序开发工具，支持c、c++、c#等多种语言开发"
+        },
+        {
+            "title" : "fleet",
+            "titleLink" : "https://www.jetbrains.com/fleet/",
+            "img" : "/img/fleet.ico",
+            "description" : "jetbrains公司出品的集成开发工具，现在还在公共预览阶段，可以通过jetbrainsToolbox下载，支持多种编程语言"
+        },
+        {
+            "title" : "aqua",
+            "titleLink" : "https://www.jetbrains.com/aqua/",
+            "img" : "/img/aqua.ico",
+            "description" : "jetbrains公司新出品的集成开发工具，主要用于测试，同时也支持java、web以及selenium测试环境"
+        },
+        {
+            "title" : "Android Studio",
+            "titleLink" : "https://developer.android.google.cn/studio/",
+            "img" : "/img/studio.ico",
+            "description" : "google公司出品的android开发工具，支持java、kotlin、c++等多种语言开发，主要用于android开发"
+        },
+        {
+            "title" : "AppCode",
+            "titleLink" : "https://www.jetbrains.com/objc/",
+            "img" : "/img/AppCode.png",
+            "description" : "jetbrains公司出品的ios开发工具，支持swift、objective-c等多种语言开发，主要用于ios开发"
+        },
+        {
+            "title" : "Goland",
+            "titleLink" : "https://www.jetbrains.com/goland/",
+            "img" : "/img/goland.ico",
+            "description" : "jetbrains公司出品的go语言开发工具，支持go语言开发"
+        },
+        {
+            "title" : "PhpStorm",
+            "titleLink" : "https://www.jetbrains.com/phpstorm/",
+            "img" : "/img/phpstorm.ico",
+            "description" : "jetbrains公司出品的php开发工具，支持php、html、css、javascript等多种语言开发"
+        },
+        {
+            "title" : "Hbuilder X",
+            "titleLink" : "https://www.dcloud.io/hbuilderx.html",
+            "img" : "/img/hbuilderx.jpg",
+            "description" : "DCloud公司出品的web开发工具，支持html、css、javascript等多种语言开发，主要用于uni-app开发"
+        },
+        {
+            "title" : "CodeSandbox",
+            "titleLink" : "https://codesandbox.io/",
+            "img" : "/img/CodeSandbox.png",
+            "description" : "一款在线使用的web开发工具，个人免费，支持公开项目个性化的设置，跨平台使用，除了支持PC端，还可以下载app在手机上编程，支持导入github项目"
+        },
+        {
+            "title" : "CodePen",
+            "titleLink" : "https://codepen.io/",
+            "img" : "https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png",
+            "description" : "一款在线使用的web开发工具，它的slogan是The best place to build, test, and discover front-end code."
+        },
+        {
+            "title" : "StackBlitz",
+            "titleLink" : "https://stackblitz.com/ ",
+            "img" : "https://c.staticblitz.com/assets/icons/icon-512x512-eb09dde1908d3c6968da8cda947cf8a1a1b966c8f54886a7a188e41e5576d829.png",
+            "description" : "一款在线使用的web开发工具，支持angular、react、vue等多种框架，支持导入github项目"
+        },
+        {
+            "title" : "Gitpod",
+            "titleLink" : "https://www.gitpod.io/",
+            "img" : "https://www.gitpod.io/favicon192.png",
+            "description" : "一款在线使用的web开发工具，在github已经拥有11.3K的star，可同步在线开发github项目，但每个月只有50个使用时间，超过需付费"
+        },
+        {
+            "title" : "PhCode",
+            "titleLink" : "https://phcode.dev/",
+            "img" : "https://phcode.dev/assets/phoenix-splash/images/phoenix-logo.svg",
+            "description" : "Adobe 公司开发过一个代码编辑器 Bracket，现在将其做成了 Web 版，重新命名为 Phoenix，可以当作线上 IDE 使用"
+        },
+        {
+            "title" : "Eclipse",
+            "titleLink" : "https://www.eclipse.org/",
+            "img" : "https://www.eclipse.org/downloads/assets/public/images/logo-eclipse.png",
+            "description" : "一款跨平台的集成ide环境，支持多种语言，也是java开发人员最喜欢的ide之一"
+        },
+        {
+            "title" : "Visual Studio Code",
+            "titleLink" : "https://code.visualstudio.com/",
+            "img" : "https://code.visualstudio.com/favicon.ico",
+            "description" : "微软公司出品的一款轻量级的代码编辑器，支持多种语言，支持插件扩展，支持多种操作系统，支持远程开发"
+        },
+        {
+            "title" : "Sublime Text",
+            "titleLink" : "https://www.sublimetext.com/",
+            "img" : "https://www.sublimetext.com/images/icon.png",
+            "description" : "一款轻量级的代码编辑器，支持多种语言，支持插件扩展，支持多种操作系统"
+        },
+        {
+            "title" : "Atom",
+            "titleLink" : "https://atom.io/",
+            "img" : "https://avatars.githubusercontent.com/u/9919?v=4&s=200",
+            "description" : "github公司出品的一款轻量级的代码编辑器，支持多种语言，支持插件扩展，支持多种操作系统"
+        },
+        {
+            "title" : "Notepad++",
+            "titleLink" : "https://notepad-plus-plus.org/",
+            "img" : "https://notepad-plus-plus.org/favicon.ico",
+            "description" : "一款轻量级的代码编辑器，支持多种语言，支持插件扩展，支持多种操作系统"
+        },
+        {
+            "title" : "Vim",
+            "titleLink" : "https://www.vim.org/",
+            "img" : "https://www.vim.org/images/vim_shortcut.ico",
+            "description" : "一款轻量级的代码编辑器，支持多种语言，支持插件扩展，支持多种操作系统"
+        },
+        {
+            "title" : "Emacs",
+            "titleLink" : "https://www.gnu.org/software/emacs/",
+            "img" : "https://www.gnu.org/software/emacs/favicon.png",
+            "description" : "一款轻量级的代码编辑器，支持多种语言，支持插件扩展，支持多种操作系统"
+        },
+        {
+            "title" : "Java",
+            "titleLink" : "https://www.java.com/",
+            "img" : "https://www.java.com/favicon.ico",
+            "description" : "一款跨平台的编程语言，由sun公司开发，现在由oracle公司维护"
+        },
+        {
+            "title" : "c",
+            "titleLink" : "https://en.wikipedia.org/wiki/C_(programming_language)",
+            "img" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/1200px-The_C_Programming_Language_logo.svg.png",
+            "description" : "一款跨平台的编程语言，高级编程语言鼻祖"
+        },
+        {
+            "title" : "c++",
+            "titleLink" : "https://c-cpp.com/cpp",
+            "img" : "/img/cpp.png",
+            "description" : "一款跨平台的编程语言，c语言的超集"
+        },
+        {
+            "title" : "c#",
+            "titleLink" : "https://docs.microsoft.com/en-us/dotnet/csharp/",
+            "img" : "/img/CSharp.png",
+            "description" : "一款跨平台的编程语言，由微软公司开发"
+        },
+        {
+            "title" : "Python",
+            "titleLink" : "https://www.python.org/",
+            "img" : "https://www.python.org/static/favicon.ico",
+            "description" : "一款跨平台的编程语言"
+        },
+        {
+            "title" : "PHP",
+            "titleLink" : "https://www.php.net/",
+            "img" : "https://www.php.net/favicon.ico",
+            "description" : "一款跨平台的编程语言，网页开发首选"
+        },
+        {
+            "title" : "JavaScript",
+            "titleLink" : "https://www.javascript.com/",
+            "img" : "https://www.javascript.com/favicon.ico",
+            "description" : "一款跨平台的编程语言，由ECMA开发"
+        },
+        {
+            "title" : "Go",
+            "titleLink" : "https://golang.org/",
+            "img" : "https://golang.org/favicon.ico",
+            "description" : "一款跨平台的编程语言，由google公司开发"
+        },
+        {
+            "title" : "Rust",
+            "titleLink" : "https://www.rust-lang.org/",
+            "img" : "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+            "description" : "一款跨平台的编程语言，微软正在使用此编程语言开发windows系统"
+        },
+        {
+            "title" : "Object-C",
+            "titleLink" : "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html",
+            "img" : "https://developer.apple.com/library/archive/Resources/1282/Images/apple2.png",
+            "description" : "由苹果公司开发,现在已经逐步被swift取代"
+        },
+        {
+            "title" : "Swift",
+            "titleLink" : "https://swift.org/",
+            "img" : "https://swift.org/assets/images/swift.svg",
+            "description" : "IOS、MacOS、watchOS、tvOS现在的主要开发语言，由苹果公司开发"
+        },
+        {
+            "title" : "Kotlin",
+            "titleLink" : "https://kotlinlang.org/",
+            "img" : "https://kotlinlang.org/assets/images/index/banners/kotlinconf24.jpg",
+            "description" : "一款跨平台的编程语言，由JetBrains公司开发,一些安卓应用正在使用此编程语言开发"
+        },
+        {
+            "title" : "TypeScript",
+            "titleLink" : "https://www.typescriptlang.org/",
+            "img" : "https://www.typescriptlang.org/favicon.ico",
+            "description" : "一款跨平台的编程语言，由微软公司开发"
+        },
+        {
+            "title" : "Ruby",
+            "titleLink" : "https://www.ruby-lang.org/en/",
+            "img" : "https://www.ruby-lang.org/favicon.ico",
+            "description" : "Ruby 是一种用于前端和后端 Web 开发以及其他类似应用的脚本语言。它是一种强健的、动态键入的、面向对象的语言，具有高层次的语法，使编程变得几乎就像用英语编码一样。"
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    ]
+    for (var i = 0 ; i < developTools.length ; i++){
+        var li = document.createElement("li")
+        li.innerHTML = "<center><img src='"+developTools[i].img+"' alt=''><br><a href='" + developTools[i].titleLink + "' , target='_blank' class='title'>" + developTools[i].title + "<p>" + developTools[i].description + "</p></a></center>"
+        document.getElementById("developTools").appendChild(li)
+    }
+
+</script>
+<style>
+    .container {
+        float: left;
+    }
+
+    .nav {
+        margin-bottom: 20px;
+    }
+
+    .nav a {
+        width: auto;
+        text-decoration: none;
+        padding-left: 20px;
+        color: #000;
+    }
+
+
+    .softwareGroup {
+        float: left;
+    }
+
+    .input-text {
+        border: 1px solid #000;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .searchButton {
+        border: 1px solid #000;
+        border-radius: 10px;
+    }
+
+    li {
+        display: flex;
+        list-style: none;
+        float: left;
+        width: 200px;
+        height: 200px;
+        border: 1px double #000;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    li img {
+        width: 40px;
+        height: 40px;
+    }
+
+    li a {
+        text-decoration: none;
+    }
+
+    li a:hover {
+        color: darkgoldenrod;
+    }
+</style>
+
+
+
+</body>
+</html>
