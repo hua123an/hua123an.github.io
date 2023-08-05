@@ -46,7 +46,6 @@ jspm_packages/
 web_modules/
 
 # TypeScript cache
-*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -88,8 +87,6 @@ web_modules/
 out
 
 # Nuxt.js build / generate output
-.nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -98,7 +95,6 @@ dist
 # public
 
 # vuepress build output
-.vuepress/dist
 
 # vuepress v2.x temp and cache directory
 .temp
