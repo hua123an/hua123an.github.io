@@ -11,13 +11,13 @@
     <div class="topNav fix-top">
         <div class="nav scroll bg-white shadow fixed-top">
             <nav class="nav">
-                <a href="#">首页</a>
+                <a href="index.html">首页</a>
                 <a href="AI.html">AI专区</a>
                 <a href="https://jha123link.wordpress.com/" target="_blank">博客</a>
                 <a href="Academic.html">学术专区</a>
                 <a href="Programming.html">前端开发</a>
                 <a href="upgrade.html">大学生专区</a>
-                <a href="software.html">资源下载</a>
+                <a href="#">资源下载</a>
             </nav>
         </div>
         <div class="nav scroll bg-white shadow fixed-top">
@@ -42,7 +42,16 @@
         <div id="system" class="softwareGroup" data-text="系统下载">
             <div id="systemDownload" class="software">系统下载<br></div>
         </div>
-
+        <br>
+        <div id="foot">
+            <span>部分软件进入可直接进入下载页，为了方便下载以下是下载链接:</span><br>
+            <a href="">查看链接</a><br>
+            <span>某些软件下载速度太慢，下面也提供了网盘下载地址:</span><br>
+            <a href="">百度网盘</a><br>
+            <a href="">123网盘</a><br>
+            <a href="">阿里云盘</a><br>
+            <span>博客的最下面也会有网盘下载链接</span>
+        </div>
     </div>
 </div>
 <script>
@@ -292,25 +301,58 @@
             "title" : "Ruby",
             "titleLink" : "https://www.ruby-lang.org/en/",
             "img" : "https://www.ruby-lang.org/favicon.ico",
-            "description" : "Ruby 是一种用于前端和后端 Web 开发以及其他类似应用的脚本语言。它是一种强健的、动态键入的、面向对象的语言，具有高层次的语法，使编程变得几乎就像用英语编码一样。"
+            "description" : "Ruby 是一种用于前端和后端 Web 开发以及其他类似应用的脚本语言。它是一种强健的、动态键入的、面向对象的语言，具有高层次的语法。"
         }
-
-
-
-
-
-
-
-
-
-
-
-
     ]
     for (var i = 0 ; i < developTools.length ; i++){
         var li = document.createElement("li")
         li.innerHTML = "<center><img src='"+developTools[i].img+"' alt=''><br><a href='" + developTools[i].titleLink + "' , target='_blank' class='title'>" + developTools[i].title + "<p>" + developTools[i].description + "</p></a></center>"
         document.getElementById("developTools").appendChild(li)
+    }
+    const systemDownload = [
+        {
+            "title" : "Windows10",
+            "titleLink" : "https://www.microsoft.com/zh-cn/software-download/windows10",
+            "img" : "https://www.microsoft.com/favicon.ico",
+            "description" : "微软公司开发的操作系统,目前使用人数最广泛的windows系统"
+    },
+        {
+            "title" : "windows11",
+            "titleLink" : "https://www.microsoft.com/zh-cn/windows/windows-11",
+            "img" : "https://www.microsoft.com/favicon.ico",
+            "description" : "微软公司开发的操作系统,目前最新的windows系统"
+        }
+        ,
+        {
+            "title" : "MacOS 11 Big Sur",
+            "titleLink" : "https://www.apple.com.cn/macos/big-sur/",
+            "img" : "https://www.apple.com.cn/favicon.ico",
+            "description" : "苹果公司开发的第十一代操作系统"
+        }
+        ,
+        {
+            "title" : "MacOS 12 Monterey",
+            "titleLink" : "https://www.apple.com.cn/macos/monterey/",
+            "img" : "https://www.apple.com.cn/favicon.ico",
+            "description" : "苹果公司开发的第十二代操作系统"
+        },
+        {
+            "title" : " MacOS 13 Ventura",
+            "titleLink" : "https://www.apple.com/macos/ventura/",
+            "img" : "https://www.apple.com.cn/favicon.ico",
+            "description" : "苹果公司开发的第十三代操作系统"
+        },
+        {
+            "title" : "MacOS 14 Sonoma",
+            "titleLink" : "https://www.apple.com.cn/macos/sonoma-preview/",
+            "img" : "https://www.apple.com.cn/favicon.ico",
+            "description" : "苹果公司开发的第十四代操作系统"
+        }
+    ]
+    for (var i = 0 ; i < systemDownload.length ; i++){
+        var li = document.createElement("li")
+        li.innerHTML = "<center><img src='"+systemDownload[i].img+"' alt=''><br><a href='" + systemDownload[i].titleLink + "' , target='_blank' class='title'>" + systemDownload[i].title + "<p>" + systemDownload[i].description + "</p></a></center>"
+        document.getElementById("systemDownload").appendChild(li)
     }
 
 </script>
@@ -370,6 +412,10 @@
 
     li a:hover {
         color: darkgoldenrod;
+    }
+    #foot{
+        display: block;
+        float: left;
     }
 </style>
 
