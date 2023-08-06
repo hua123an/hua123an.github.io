@@ -1,0 +1,62 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+}
+.container {
+    float: left;
+}
+.nav{
+    margin-bottom: 20px;
+}
+.nav a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: #000;
+}
+
+
+.AIGroup {
+    float: left;
+}
+
+.input-text {
+    border: 1px solid #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.searchButton {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+li {
+    display: flex;
+    list-style: none;
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+li img {
+    width: 40px;
+    height: 40px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    color: darkgoldenrod;
+}

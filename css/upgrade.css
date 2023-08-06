@@ -1,0 +1,47 @@
+
+body{
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+
+}
+.nav {
+    margin-bottom: 20px;
+}
+
+.nav a {
+    width: auto;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #000;
+}
+
+.nav-underline {
+    list-style: none;
+}
+
+.nav-underline li {
+    float: left;
+    padding-left: 25%;
+}
+
+#list {
+    position: absolute;
+    right: 0;
+    top: 130px;
+    width: 400px;
+    max-height: 600px;
+    overflow: auto;
+    height: auto;
+    margin-top: 10px;
+    /*background-color: aqua;*/
+    border: 1px solid black;
+}
+
+#list li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+#list li a {
+    text-decoration: none;
+}
