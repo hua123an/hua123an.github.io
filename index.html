@@ -49,9 +49,13 @@
                 <button class="searchButton">站内搜索</button>
             </div>
         </center>
+        <div class="indexGroup" id="color" data-text="配色网站">
+            <div id="choseColor" class="index">配色网站<br></div>
+        </div>
         <div class="indexGroup" id="common" data-text="常用工具">
             <div id="commonTools" class="index">常用工具<br></div>
         </div>
+
         <div class="indexGroup" id="compile" data-text="编译工具">
             <div id="compileTools" class="index">编译工具<br></div>
         </div>
@@ -101,14 +105,72 @@
         }
     })
 
+    const choseColors = [
+        {
+            "title" : "webgradients",
+            "titleLink" : "https://webgradients.com/",
+            "img" : "https://webgradients.com/img/banners/logo.svg",
+            "description" : "WebGradients是一个免费的渐变色彩选择网站，提供了180多种渐变色彩选择，可以直接复制css代码。"
+        }
+        ,{
+        "title" : "shapefactory",
+        "titleLink" : "https://www.shapefactory.co/",
+        "img" : "/img/shapefactory.png",
+        "description" : "ShapeFactory是简单设计工具，提供Logo、Pigment、Gradient、Duotone四种功能。"
+        },
+        {
+            "title" : "colorsupplyyy",
+            "titleLink" : "https://colorsupplyyy.com/app",
+            "img" : "https://colorsupplyyy.com/assets/rainbow_logo-c01f4e1fb0ed89bd7fba476e68bf6f05c50d0db9de6dc9a8395b28f421aa9930.svg",
+            "description" : "来自世界各地的大师的配色方案."
+        },
+        {
+            "title" : "colorhunt",
+            "titleLink" : "https://colorhunt.co/",
+            "img" : "https://colorhunt.co/img/color-hunt-logo-tongue.svg",
+            "description" : "Color Hunt是一个免费和开源的平台，用于创建、分享和应用颜色调色板。"
+        },
+        {
+            "title" : "colormind",
+            "titleLink" : "http://colormind.io/",
+            "img" : "http://colormind.io/img/logo_nav.svg",
+            "description" : "基于AI的调色网站，可以生成配色方案。"
+        },
+        {
+            "title" : "khroma",
+            "titleLink" : "https://khroma.co/",
+            "img" : "https://www.khroma.co/assets/images/wordmark.svg",
+            "description" : "基于AI的调色网站，实现高精度的配色方案。"
+        },{
+        "title" : "colorhexa",
+        "titleLink" : "https://www.colorhexa.com/",
+        "img" : "https://www.colorhexa.com/static/i/logo.min.svg",
+            "description" : "一站式网页设计工具。"
+        },{
+        "title" : "webcolourdata",
+            "titleLink" : "https://webcolourdata.com/",
+        "img" : "https://img.sedoparking.com/templates/bg/arrows.png",
+            "description" : "快速寻找当前网页颜色"
+        },{
+        "title" : "colorlisa",
+            "titleLink" : "http://colorlisa.com/",
+        "img" : "http://colorlisa.com/icons/apple-touch-icon-76x76.png",
+            "description" : "Color Lisa的色板都是来自于名家的作品"
+        },{
+        "title" : "colourco",
+            "titleLink" : "https://colourco.de/",
+        "img" : "https://toptal.com/designers/colourcode/apple-touch-icon.png",
+            "description" : "Colourco.de是一个基于Web的工具，可以帮助您创建、保存和共享调色板。"
+        }
+    ]
+    for (var i = 0 ; i < choseColors.length ; i++){
+        var li = document.createElement("li")
+        li.innerHTML = "<center><a href='" + choseColors[i].titleLink + "' target='_blank' class='title'><img src='" + choseColors[i].img + "' alt=''><br>" + choseColors[i].title + "<p>"+choseColors[i].description+"</p></a></center>"
+        document.getElementById("choseColor").appendChild(li)
+    }
 
     const commonTools = [
-        {
-            "title" : "渐变色彩选择",
-            "titleLink" : "https://webgradients.com/",
-            "img" : "https://tools.haiyong.site/wp-content/uploads/2016/01/webgradients.png"
-    }
-        ,{
+   {
         "title": "\n\t\t\t\t\t\t\t\t\t\t\t\n\n\t\t\t\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tHTML 压缩/解压工具 \n\t\t\t\t\t\t\t\t\t\t",
         "titleLink": "https://c.runoob.com/front-end/47/",
         "img": "https://tools.haiyong.site/wp-content/uploads/2016/01/html.png"
