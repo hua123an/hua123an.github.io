@@ -35,11 +35,12 @@ body{
 }
 
 li {
+    display: flex;
     list-style: none;
     float: left;
     width: 200px;
     height: 200px;
-    border: 1px double #000;
+    border: 1px solid #000;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
