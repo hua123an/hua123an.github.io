@@ -4,7 +4,7 @@
   "state_url" : "./index.html",
   "icons" : [
     {
-      "src" : "/img/icon.png",
+      "src" : "/img/icon.jpg",
       "type" : "image/png",
       "sizes" : "144x144"
     }
