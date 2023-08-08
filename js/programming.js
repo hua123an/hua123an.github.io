@@ -234,12 +234,6 @@ const frontMainTools = [
         li.innerHTML = "<center><img src='" + frontMainTools[i].img + "' alt=''><br><a href='" + frontMainTools[i].titleLink + "' , target='_blank' class='title'>" + frontMainTools[i].title + "<p>" + frontMainTools[i].description + "</p></a></center>"
         document.getElementById("frontMainTools").appendChild(li)
     }
-
-
-
-
-
-
     const frontFrame = [{
     "title": " \n            Vue.js中文网        ",
     "titleLink": "https://cn.vuejs.org/",
