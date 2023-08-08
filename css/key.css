@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #d1fdff;
+
+}
+.container {
+    float: left;
+}
+.nav{
+    margin-bottom: 20px;
+}
+.nav a{
+    text-decoration: none;
+    padding-left: 20px;
+    color: #000;
+}
+.keyGroup {
+    float: left;
+}
+#jetbrains{
+    margin-left: 400px;
+}
+
