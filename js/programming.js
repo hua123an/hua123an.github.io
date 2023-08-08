@@ -161,6 +161,85 @@
     li.innerHTML = "<center><img src='" + frontClass[i].img + "' alt=''><br><a href='" + frontClass[i].titleLink + "' , target='_blank' class='title'>" + frontClass[i].title + "<p>" + frontClass[i].description + "</p></a></center>"
     document.getElementById("frontClass").appendChild(li)
 }
+const frontMainTools = [
+    {
+        "title" : "Animate.css",
+        "titleLink" : "https://animate.style/",
+        "img" : "https://animate.style/img/favicon.ico",
+        "description" : " css动画库"
+    },
+    {
+        "title" : "Magic Effects",
+        "titleLink" : "https://www.minimamente.com/project/magic/",
+        "img" : "https://www.minimamente.com/project/magic/assets/images/magic_big.png",
+        "description" : " 动画效果"
+    },
+    {
+        "title" : "Hover.css",
+        "titleLink" : "https://ianlunn.github.io/Hover/",
+        "img" : "https://ianlunn.github.io/Hover/sequence-logo.png",
+        "description" : " 鼠标悬停效果"
+    },
+    {
+        "title" : "CSSHake",
+        "titleLink" : "https://elrumordelaluz.github.io/csshake/",
+        "img" : "https://elrumordelaluz.github.io/csshake/img/csshake-logo.png",
+        "description" : " 震动摇晃库"
+    },
+    {
+        "title" : "anine",
+        "titleLink" : "https://animejs.com/",
+        "img" : "https://animejs.com/documentation/assets/img/anime-mini-logo.svg",
+        "description" : "炫酷效果"
+    },
+    {
+        "title" : "textillate",
+        "titleLink" : "https://textillate.js.org/",
+        "img" : "",
+        "description" : "文字动画库"
+    },
+    {
+        "title" : "Anijs",
+        "titleLink" : "http://anijs.github.io/",
+        "img" : "",
+        "description" : "板块动画库"
+    },
+    {
+        "title" : "100l5",
+        "titleLink" : "https://10015.io/",
+        "img" : "https://10015.io/brand/logo-on-light.svg",
+        "description" : "All Online Tools in “One Box”"
+    },
+    {
+        "title" : "Animated Background",
+        "titleLink" : "https://www.minimamente.com/project/animated-background/",
+        "img" : "https://www.minimamente.com/project/animated-background/images/bg.png",
+        "description" : "背景动画"
+    },
+    {
+        "title" : "canvas",
+        "titleLink" : "https://www.w3school.com.cn/tags/tag_canvas.asp",
+        "img" : "",
+        "description" : "canvas"
+    },
+    {
+        "title" : "whirl",
+        "titleLink" : "https://whirl.netlify.app/",
+        "img" : "",
+        "description" : "loading动画"
+    }
+]
+    for (var i = 0; i < frontMainTools.length; i++) {
+    var li = document.createElement("li")
+        li.innerHTML = "<center><img src='" + frontMainTools[i].img + "' alt=''><br><a href='" + frontMainTools[i].titleLink + "' , target='_blank' class='title'>" + frontMainTools[i].title + "<p>" + frontMainTools[i].description + "</p></a></center>"
+        document.getElementById("frontMainTools").appendChild(li)
+    }
+
+
+
+
+
+
     const frontFrame = [{
     "title": " \n            Vue.js中文网        ",
     "titleLink": "https://cn.vuejs.org/",

@@ -49,8 +49,8 @@ li {
 }
 
 li img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: auto;
 }
 
 li a {
@@ -59,4 +59,7 @@ li a {
 
 li a:hover {
     color: darkgoldenrod;
+}
+h2{
+    text-align: center;
 }
