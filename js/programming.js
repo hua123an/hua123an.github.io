@@ -70,7 +70,22 @@
     "titleLink": "https://www.runoob.com/js/js-tutorial.html",
     "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/js-logo.png",
     "description": " JavaScript 是 Web 的编程语言"
-}, {
+},
+{
+    "title" : "学习TypeScript",
+    "titleLink" : "https://wangdoc.com/typescript/"
+    "img" : "./img/TypeScript.png",
+    "description" : "网道学习TypeScript网站"
+
+},
+{
+   "title" : "学习JavaScript",
+    "titleLink" : "https://wangdoc.com/javascript/"
+    "img" : "./img/TypeScript.png",
+    "description" : "网道学习JavaScript网站"
+}
+
+ {
     "title": " \n            学习 HTML DOM        ",
     "titleLink": "https://www.runoob.com/htmldom/htmldom-tutorial.html",
     "img": "https://tools.haiyong.site/wp-content/uploads/2022/05/html-dom.png",
