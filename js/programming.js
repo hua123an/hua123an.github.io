@@ -83,7 +83,25 @@
     "titleLink" : "https://wangdoc.com/javascript/"
     "img" : "./img/TypeScript.png",
     "description" : "网道学习JavaScript网站"
-}
+},
+{
+    "title" : "学习HTML",
+    "titleLink" : "https://wangdoc.com/html/"
+    "img" : "./img/TypeScript.png",
+    "description" : "网道学习HTML网站"
+},
+{
+    "title" : "学习ES6",
+    "titleLink" : "https://wangdoc.com/es6/"
+    "img" : "./img/TypeScript.png",
+    "description" : "网道学习es6网站"
+},
+{
+    "title" : "学习WebAPI",
+    "titleLink" : "https://wangdoc.com/webapi/"
+    "img" : "./img/TypeScript.png",
+    "description" : "网道学习webapi网站"
+},
 
  {
     "title": " \n            学习 HTML DOM        ",
