@@ -1,7 +1,7 @@
 {
   "name" : "Test",
   "display" : "standalone",
-  "state_url" : "index.html",
+  "state_url" : "*.html",
   "icons" : [
     {
       "src" : "/img/icon.jpg",
