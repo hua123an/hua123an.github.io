@@ -163,6 +163,12 @@
 }
 const frontMainTools = [
     {
+        "title" : "three.js",
+        "titleLink" : "https://threejs.org/",
+        "img" : "https://threejs.org/files/projects/junni.png",
+        "description" : " 3D动画库"
+    },
+    {
         "title" : "Animate.css",
         "titleLink" : "https://animate.style/",
         "img" : "https://animate.style/img/favicon.ico",
