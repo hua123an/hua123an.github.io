@@ -73,32 +73,32 @@
 },
 {
     "title" : "学习TypeScript",
-    "titleLink" : "https://wangdoc.com/typescript/"
+    "titleLink" : "https://wangdoc.com/typescript/",
     "img" : "./img/TypeScript.png",
     "description" : "网道学习TypeScript网站"
 
 },
 {
    "title" : "学习JavaScript",
-    "titleLink" : "https://wangdoc.com/javascript/"
+    "titleLink" : "https://wangdoc.com/javascript/",
     "img" : "./img/TypeScript.png",
     "description" : "网道学习JavaScript网站"
 },
 {
     "title" : "学习HTML",
-    "titleLink" : "https://wangdoc.com/html/"
+    "titleLink" : "https://wangdoc.com/html/",
     "img" : "./img/TypeScript.png",
     "description" : "网道学习HTML网站"
 },
 {
     "title" : "学习ES6",
-    "titleLink" : "https://wangdoc.com/es6/"
+    "titleLink" : "https://wangdoc.com/es6/",
     "img" : "./img/TypeScript.png",
     "description" : "网道学习es6网站"
 },
 {
     "title" : "学习WebAPI",
-    "titleLink" : "https://wangdoc.com/webapi/"
+    "titleLink" : "https://wangdoc.com/webapi/",
     "img" : "./img/TypeScript.png",
     "description" : "网道学习webapi网站"
 },
@@ -367,7 +367,7 @@ const frontMainTools = [
         "description": " bootstrap vue版本"
     },{
         "title" : "Buefy",
-        "titileLink" : "https://buefy.org"
+        "titileLink" : "https://buefy.org",
         "img" : "https://buefy.org/static/img/buefy.1d65c18.png",
         "description" : "Lightweight UI components for Vue.js based on Bulma"
 
@@ -385,13 +385,13 @@ const frontMainTools = [
     "description" : "企业级中后台UI框架"
 },{
     "title" : "CoreUI Vue",
-    "titleLink" : "https://coreui.io/vue/"
-    "img" : "https://coreui.io/vue/images/favicons/apple-icon-57x57.png"
+    "titleLink" : "https://coreui.io/vue/",
+    "img" : "https://coreui.io/vue/images/favicons/apple-icon-57x57.png",
     "description" : "专注于后台管理系统的UI库"
 },{
     "title" : "Vue Material",
-    "titileLink" : "https://vuematerial.io"
-    "img" : "https://img.shields.io/npm/l/vue-material.svg"
+    "titileLink" : "https://vuematerial.io",
+    "img" : "https://img.shields.io/npm/l/vue-material.svg",
     "description" : "Build beautiful apps with Material Design and Vue.js"
 },{
     "title" : "Vuesax",
