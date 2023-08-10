@@ -350,7 +350,7 @@ const frontMainTools = [
     },
     {
         "title" : "Vuetify",
-        "titileLink" : "https://vuetifyjs.com/zh-Hans/",
+        "titleLink" : "https://vuetifyjs.com/zh-Hans/",
         "img" : "https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-light.svg",
         "description" : "Vuetify 是一个零设计经验可用的 Vue 界面组件框架，包含了很多优美的自定义 Vue 组件。"
     },
