@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
+<div id="fixedNav"></div>
 <div class="home-main">
-
     <div class="topNav fix-top">
         <div class="nav scroll bg-white shadow fixed-top">
             <nav class="nav">
@@ -22,7 +22,6 @@
                 <a href="/components/upgrade.html">大学生专区</a>
                 <a href="/components/software.html">资源下载</a>
                 <a href="/components/key.html">激活码</a>
-
             </nav>
         </div>
     </div>
@@ -80,6 +79,10 @@
 </div>
 <script src="code.jquery.com_jquery-3.7.0.js"></script>
 <script src="/js/index.js"></script>
-<script src="/js/lazyLoad.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
 </body>
 </html>

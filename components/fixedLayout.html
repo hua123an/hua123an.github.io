@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/fixedLayout.css">
+    <script src="/code.jquery.com_jquery-3.7.0.js"></script>
+</head>
+<body>
+<div class="fixedLayout">
+    <div class="fixed-nav-top">
+        <nav class="fixed-nav">
+            <a href="#">首页</a>
+            <a href="/components/AI.html">AI专区</a>
+            <a href="https://jha123link.wordpress.com/" target="_blank">博客</a>
+            <a href="/components/Academic.html">学术专区</a>
+            <a href="/components/Programming.html">前端开发</a>
+            <a href="/components/upgrade.html">大学生专区</a>
+            <a href="/components/software.html">资源下载</a>
+            <a href="/components/key.html">激活码</a>
+        </nav>
+    </div>
+</div>
+<script>
+<!--    获取页面y轴的滚动距离-->
+    $(window).scroll(function () {
+        const top = $(window).scrollTop();
+        if (top > 78) {
+            $(".fixed-nav").addClass("show");
+        } else {
+            $(".fixed-nav").removeClass("show");
+        }
+    })
+
+
+</script>
+</body>
+</html>

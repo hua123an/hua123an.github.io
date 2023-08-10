@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/programming.css">
 </head>
 <body>
+<div id="fixedNav"></div>
 <div class="home-main">
 
     <div class="topNav fix-top">
@@ -98,5 +99,10 @@
 
 <script src="../code.jquery.com_jquery-3.7.0.js"></script>
 <script src="/js/programming.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
 </body>
 </html>

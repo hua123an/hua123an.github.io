@@ -354,6 +354,13 @@ const frontMainTools = [
         "img" : "https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-light.svg",
         "description" : "Vuetify 是一个零设计经验可用的 Vue 界面组件框架，包含了很多优美的自定义 Vue 组件。"
     },
+        {
+            "title" : "FlowBit",
+            "titleLink" : "https://flowbite.com/docs/getting-started/introduction/",
+            "img" : "https://flowbite.com/images/logo.svg",
+            "description" : "Flowbite is a free Open Source UI Kit that provides a flexible and modern looking theme for your next project."
+
+        },
     {
         "title" : "NutUI",
         "titleLink" : "https://nutui.jd.com/#/index",

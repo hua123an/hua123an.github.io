@@ -7,6 +7,7 @@
 
 </head>
 <body>
+<div id="fixedNav"></div>
 <div class="home-main">
     <div class="topNav fix-top">
         <div class="nav scroll bg-white shadow fixed-top">
@@ -25,11 +26,11 @@
     </div>
     <div class="nav scroll bg-white shadow fixed-top">
         <nav class="nav nav-underline">
-            <center>
+            <div style="text-align: center;">
                 <li>高等数学</li>
                 <li>线性代数</li>
                 <li>微积分</li>
-            </center>
+            </div>
         </nav>
     </div>
     <br>
@@ -46,5 +47,10 @@
 </div>
 <script src="../code.jquery.com_jquery-3.7.0.js"></script>
 <script src="/js/upgrade.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <title>AI专区</title>
 </head>
 <body>
+<div id="fixedNav"></div>
 <div class="home-main">
     <div class="topNav fix-top">
         <div class="nav scroll bg-white shadow fixed-top">
@@ -76,5 +77,10 @@
 </div>
 <script src="../code.jquery.com_jquery-3.7.0.js"></script>
 <script src="/js/AI.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
 </body>
 </html>
