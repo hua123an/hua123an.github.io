@@ -26,6 +26,12 @@ const choseColors = [
         "titleLink": "https://webgradients.com/",
         "img": "https://webgradients.com/img/banners/logo.svg",
         "description": "WebGradients是一个免费的渐变色彩选择网站，提供了180多种渐变色彩选择，可以直接复制css代码。"
+    },
+    {
+        "title" : "realtimecolors",
+        "titleLink" : "https://realtimecolors.com/",
+        "img" : "https://realtimecolors.com/images/favicon.png",
+        "description" : "Realtime Colors是一个实时颜色选择器，可以实时调整颜色，然后复制css代码。"
     }
     , {
         "title": "shapefactory",
