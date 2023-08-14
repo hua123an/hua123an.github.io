@@ -87,3 +87,7 @@ const vmware = ["VMware Workstation 15 激活密钥：\n" +
 $(".vmware").click(function () {
     $("#jetbrains").val(vmware)
 })
+const openai = "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"
+$(".openai").click(function () {
+    $("#jetbrains").val(openai)
+})
