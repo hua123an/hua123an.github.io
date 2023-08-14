@@ -91,3 +91,253 @@ const openai = "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"
 $(".openai").click(function () {
     $("#jetbrains").val(openai)
 })
+const windows = "一、windows10企业版\n" +
+    "N2XRH-GCH84-MV34M-V9QT9-QV4X3\n" +
+    "\n" +
+    "MKNBD-QJGRF-JTTFM-Y9VP3-8K8XG\n" +
+    "\n" +
+    "KRNJX-22GXY-HCW46-MWYHY-YWRDB\n" +
+    "\n" +
+    "RDHTN-YFFKY-8YVR7-Q996Y-K74X3\n" +
+    "\n" +
+    "CGKNM-P2HMP-3DDXH-6G4MD-M7V3B\n" +
+    "\n" +
+    "NTWYF-W667M-GFJYK-Y29XP-XTMDQ\n" +
+    "\n" +
+    "VK7JG-NPHTM-C97JM-9MPGT-3V66T\n" +
+    "\n" +
+    "MH37W-N47XK-V7XM9-C7227-GCQG9\n" +
+    "\n" +
+    "NPPR9-FWDCX-D2C8J-H872K-2YT43\n" +
+    "\n" +
+    "W269N-WFGWX-YVC9B-4J6C9-T83GX\n" +
+    "\n" +
+    "NYW94-47Q7H-7X9TT-W7TXD-JTYPM\n" +
+    "\n" +
+    "NJ4MX-VQQ7Q-FP3DB-VDGHX-7XM87\n" +
+    "\n" +
+    "VK7JG-NPHTM-C97JM-9MPGT-3V66T\n" +
+    "\n" +
+    "NPPR9-FWDCX-D2C8J-H872K-2YT43\n" +
+    "\n" +
+    "DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4\n" +
+    "\n" +
+    "PBHCJ-Q2NYD-2PX34-T2TD6-233PK\n" +
+    "\n" +
+    "二、win10专业版\n" +
+    "win10专业版永久激活密钥(32位和64位均可正常使用)：\n" +
+    "\n" +
+    "RNP9C-WY3PM-8WG94-WT8Q9-7XMPF\n" +
+    "\n" +
+    "GC42Q-XHW4P-6HKVD-D3839-P6W8B\n" +
+    "\n" +
+    "NJ4MX-VQQ7Q-FP3DB-VDGHX-7XM87\n" +
+    "\n" +
+    "MH37W-N47XK-V7XM9-C7227-GCQG9\n" +
+    "\n" +
+    "VK7JG-NPHTM-C97JM-9MPGT-3V66T\n" +
+    "\n" +
+    "7XKWN-VQ2RD-CXMHT-PH6FR-W8F9M\n" +
+    "\n" +
+    "DY3JJ-NHXTY-HF82D-YBDMH-BDWXM\n" +
+    "\n" +
+    "YV4JC-NMFHX-MGH3K-QKBPH-7QWXM\n" +
+    "\n" +
+    "NPGQ7-KFYYM-GXD98-MWF6H-FJRDB\n" +
+    "\n" +
+    "YF3NJ-PW7QQ-TG8HD-VTTC3-BG9TY\n" +
+    "\n" +
+    "HTNHD-QP67R-GMFM6-WR47H-HXMQB\n" +
+    "\n" +
+    "NPFQ6-F83HV-FX662-B2HGF-YTDGY\n" +
+    "\n" +
+    "P6QDR-86N7B-7FFDK-G7G4P-PGYQB\n" +
+    "\n" +
+    "NRC3M-HXFVP-B97RR-XDWDK-GJF9M\n" +
+    "\n" +
+    "BBTFN-6KXXM-VXBGV-694Q7-8HV22\n" +
+    "\n" +
+    "FNV7V-WJXXJ-2JQRC-V47VP-9QBW2\n" +
+    "\n" +
+    "X9NV3-MCH4F-M3G24-2PKR2-BTDT3\n" +
+    "\n" +
+    "W269N-WFGWX-YVC9B-4J6C9-T83GX\n" +
+    "\n" +
+    "W269N-WFGWX-YVC9B-4J6C9-T83GX\n" +
+    "\n" +
+    "VK7JG-NPHTM-C97JM-9MPGT-3V66T\n" +
+    "\n" +
+    "YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY\n" +
+    "\n" +
+    "2B87N-8KFHP-DKV6R-Y2C8J-PKCKT\n" +
+    "\n" +
+    "WGGHN-J84D6-QYCPR-T7PJ7-X766F\n" +
+    "\n" +
+    "BT79Q-G7N6G-PGBYW-4YWX6-6F4BT\n" +
+    "\n" +
+    "CB7QN-QWBVB-GKFKV-YW8PM-39MQB\n" +
+    "\n" +
+    "8C693-XNHDV-JXYF2-96Q3B-RC2KM\n" +
+    "\n" +
+    "G4KNB-BWRVQ-P2MPH-PV9WJ-JFG6Y\n" +
+    "\n" +
+    "C9VYQ-NJWDH-6Y78W-KWFJ3-H22KM\n" +
+    "\n" +
+    "N64MC-GT6XY-PWMJ7-6KDJ7-FJRDB\n" +
+    "\n" +
+    "PXW3C-WN8WF-R2BPB-FJPJ4-844DB\n" +
+    "\n" +
+    "MN66T-W2GPD-2TGK4-3CMMD-M7V3B\n" +
+    "\n" +
+    "QQ4NP-H4TPW-QHCHR-XD26C-Q3WXM\n" +
+    "\n" +
+    "9NQFH-BY439-7PQWC-7T9FB-88F9M\n" +
+    "\n" +
+    "JMFH9-NP9FR-PTGQ8-D2BC6-722KM\n" +
+    "\n" +
+    "RHFCW-WN22P-2VDRT-MH98X-C7JXM\n" +
+    "\n" +
+    "X7QH7-NY9Y7-PVCGM-6TF34-VMH3B\n" +
+    "\n" +
+    "MH37W-N47XK-V7XM9-C7227-GCQG9\n" +
+    "\n" +
+    "W269N-WFGWX-YVC9B-4J6C9-T83GX\n" +
+    "\n" +
+    "JPYNJ-XTFCR-372YJ-YJJ4Q-G83YB\n" +
+    "\n" +
+    "R3BYW-CBNWT-F3JTP-FM942-BTDXY\n" +
+    "\n" +
+    "KTNPV-KTRK4-3RRR8-39X6W-W44T3\n" +
+    "\n" +
+    "8N67H-M3CY9-QT7C4-2TR7M-TXYCV\n" +
+    "\n" +
+    "CKFK9-QNGF2-D34FM-99QX3-8XC4K\n" +
+    "\n" +
+    "JPYNH-XTFCR-372YJ-YJJ3Q-G83YB\n" +
+    "\n" +
+    "R3BYW-CBNWT-F3JTP-FM942-BTDXY\n" +
+    "\n" +
+    "M4JCC-YGNFV-GTKXX-F4WR9-66PKM\n" +
+    "\n" +
+    "2MNXF-67873-Y36D2-VT6DB-RC2KM\n" +
+    "\n" +
+    "三、常用笔记本激活码：\n" +
+    "\n" +
+    "戴尔 DELL 序列号： 342DG-6YJR8-X92GV-V7DCV-P4K27\n" +
+    "\n" +
+    "联想 LENOVO 序列号： 22TKD-F8XX6-YG69F-9M66D-PMJBM\n" +
+    "\n" +
+    "三星 SAMSUNG 序列号：49PB6-6BJ6Y-KHGCQ-7DDY6-TF7CD\n" +
+    "\n" +
+    "宏基 ACER 序列号： YKHFT-KW986-GK4PY-FDWYH-7TP9F或FJGCP-4DFJD-GJY49-VJBQ7-HYRR\n" +
+    "\n" +
+    "四、win10各版本密钥：\n" +
+    "\n" +
+    "1、神Key(适用各版本)：\n" +
+    "\n" +
+    "KH2J9-PC326-T44D4-39H6V-TVPBY\n" +
+    "\n" +
+    "TFP9Y-VCY3P-VVH3T-8XXCC-MF4YK\n" +
+    "\n" +
+    "236TW-X778T-8MV9F-937GT-QVKBB\n" +
+    "\n" +
+    "87VT2-FY2XW-F7K39-W3T8R-XMFGF\n" +
+    "\n" +
+    "6K2KY-BFH24-PJW6W-9GK29-TMPWP\n" +
+    "\n" +
+    "RHTBY-VWY6D-QJRJ9-JGQ3X-Q2289\n" +
+    "\n" +
+    "企业版：XGVPP-NMH47-7TTHJ-W3FW7-8HV2C\n" +
+    "\n" +
+    "教育版：YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY\n" +
+    "\n" +
+    "专业版N：2B87N-8KFHP-DKV6R-Y2C8J-PKCKT\n" +
+    "\n" +
+    "企业版N：WGGHN-J84D6-QYCPR-T7PJ7-X766F\n" +
+    "\n" +
+    "教育版N：84NGF-MHBT6-FXBX8-QWJK7-DRR8H\n" +
+    "\n" +
+    "企业版S：FWN7H-PF93Q-4GGP8-M8RF3-MDWWW\n" +
+    "\n" +
+    "单语言版：BT79Q-G7N6G-PGBYW-4YWX6-6F4BT\n" +
+    "\n" +
+    "Win10和Office 2016官方kms序列号激活密钥,win10 10240 KMS激活密钥\n" +
+    "\n" +
+    "先用win10预览版本的序列号去激活，如果还不行的话则可以使用这个序列号。\n" +
+    "\n" +
+    "2、通用版win10密匙：\n" +
+    "\n" +
+    "VK7JG-NPHTM-C97JM-9MPGT-3V66T\n" +
+    "\n" +
+    "NPPR9-FWDCX-D2C8J-H872K-2YT43\n" +
+    "\n" +
+    "W269N-WFGWX-YVC9B-4J6C9-T83GX\n" +
+    "\n" +
+    "NYW94-47Q7H-7X9TT-W7TXD-JTYPM\n" +
+    "\n" +
+    "NJ4MX-VQQ7Q-FP3DB-VDGHX-7XM87\n" +
+    "\n" +
+    "MH37W-N47XK-V7XM9-C7227-GCQG9\n" +
+    "\n" +
+    "VK7JG-NPHTM-C97JM-9MPGT-3V66T\n" +
+    "\n" +
+    "下面是各win10版本的序列号：\n" +
+    "\n" +
+    "win 10 Core Single Language:JPYNJ-XTFCR-372YJ-YJJ4Q-G83YB\n" +
+    "\n" +
+    "win 10 Core 中文版 Language Edition:R3BYW-CBNWT-F3JTP-FM942-BTDXY\n" +
+    "\n" +
+    "win 10 Core :KTNPV-KTRK4-3RRR8-39X6W-W44T3\n" +
+    "\n" +
+    "win 10 Pro:8N67H-M3CY9-QT7C4-2TR7M-TXYCV\n" +
+    "\n" +
+    "win 10 Enterprise:CKFK9-QNGF2-D34FM-99QX3-8XC4K\n" +
+    "\n" +
+    "win 10 Core Single Language :JPYNH-XTFCR-372YJ-YJJ3Q-G83YB\n" +
+    "\n" +
+    "win 10 Core Chinese Languange Edition:R3BYW-CBNWT-F3JTP-FM942-BTDXY\n" +
+    "\n" +
+    "win10企业版：\n" +
+    "\n" +
+    "win 10 Enterprise : NPPR9-FWDCX-D2C8J-H872K-2YT43\n" +
+    "\n" +
+    "win 10 Enterprise N: DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4\n" +
+    "\n" +
+    "win 10 Enterprise 2015 LTSB :WNMTR-4C88C-JK8YV-HQ7T2-76DF9\n" +
+    "\n" +
+    "win 10 Enterprise 2015 LTSB N : 2F77B-TNFGY-69QQF-B8YKP-D69TJ\n" +
+    "\n" +
+    "激活方法：\n" +
+    "\n" +
+    "系统安装完毕后，首先以管理员身份打开CMD命令行窗口，按下Win+X，选择命令提示符(管理员)。\n" +
+    "\n" +
+    "说明：kms.xspace.in是kms服务器地址，可能会失效，如果激活失败，可以自行搜索kms服务器地址，将kms.xspace.in替换成新的地址即可，比如换成kms.03k.org，参考可用的kms激活服务器有哪些\n" +
+    "\n" +
+    "win10专业版用户请依次输入：\n" +
+    "\n" +
+    "slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX\n" +
+    "\n" +
+    "slmgr /skms kms.03k.org\n" +
+    "\n" +
+    "slmgr /ato\n" +
+    "\n" +
+    "win10企业版用户请依次输入：\n" +
+    "\n" +
+    "slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43\n" +
+    "\n" +
+    "slmgr /skms kms.03k.org\n" +
+    "\n" +
+    "slmgr /ato\n" +
+    "\n" +
+    "win10家庭版用户依次输入：\n" +
+    "\n" +
+    "slmgr /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99\n" +
+    "\n" +
+    "slmgr /skms kms.03k.org\n" +
+    "\n" +
+    "slmgr /ato\n" +
+    "\n" +
+    "\n"
+$(".windows").click(function () {
+    $("#jetbrains").val(windows)
+})
