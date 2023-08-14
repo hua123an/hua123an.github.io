@@ -342,6 +342,12 @@ const frontMainTools = [
         "img" : "https://file.iviewui.com/view-design-dist/img/logo-small.4a34a883.png",
         "description" : "企业级中后台UI框架"
     },
+        {
+            "title" : "ikun-ui",
+            "titleLink" : "https://ikun-ui.netlify.app/",
+            "img" : "https://ikun-ui.netlify.app/logo.svg",
+            "description" : "别闹，人家可以正经的ui框架，常用的组件都有"
+        },
     {
         "title" : "Quasar",
         "titleLink" : "https://quasar.dev/",
