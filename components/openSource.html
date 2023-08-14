@@ -1,10 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IT华安</title>
+    <link rel="stylesheet" href="/css/openSource.css">
 </head>
 <body>
-
+<div id="fixedNav"></div>
+<div class="home-main">
+    <div class="topNav fix-top">
+        <div class="nav scroll bg-white shadow fixed-top">
+            <nav class="topNav"></nav>
+        </div>
+    </div>
+    <div class="nav scroll bg-white shadow fixed-top">
+        <nav class="nav nav-underline">
+            <center>
+                <a href="#go" class="nav-link">goProject</a>
+                <a href="#java" class="nav-link">javaProject</a>
+                <a href="#vue" class="nav-link">vueProject</a>
+                <a href="#technology" class="nav-link">技术学习</a>
+                <a href="#develop" class="nav-link">开发软件</a>
+                <a href="#icon" class="nav-link">公共图标库</a>
+                <a href="#online" class="nav-link">在线工具</a>
+                <a href="#code" class="nav-link">代码托管</a>
+                <a href="#search" class="nav-link">搜索引擎</a>
+            </center>
+        </nav>
+    </div>
+    <div class="container" style="max-width: 1600px">
+        <center>
+            <div class="siteSearch">
+                <input type="text" placeholder="站内搜素" class="input-text">
+                <button class="searchButton">站内搜索</button>
+            </div>
+        </center>
+        <div class="opensourceGroup" id="go" data-text="go开源项目">
+            <div id="goProject" class="openSource">go开源项目<br></div>
+        </div>
+        <div class="opensourceGroup" id="java" data-text="java开源项目">
+            <div id="javaProject" class="openSource">java开源项目<br></div>
+        </div>
+        <div class="opensourceGroup" id="vue" data-text="vue开源项目">
+            <div id="vueProject" class="openSource">vue开源项目<br></div>
+        </div>
+    </div>
+</div>
+<script src="/code.jquery.com_jquery-3.7.0.js"></script>
+<script src="/js/openSource.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
+<script src="/js/header.js"></script>
 </body>
 </html>
