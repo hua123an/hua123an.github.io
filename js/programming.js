@@ -336,6 +336,12 @@ const frontMainTools = [
         "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/Element.jpg",
         "description": " 网站快速成型工具"
     },
+        {
+            "title" : "taliwind",
+            "titleLink" : "https://tailwindui.com",
+            "img": "https://tailwindui.com/favicon.ico",
+            "description" : "Beautiful UI components, crafted with Tailwind CSS."
+        },
     {
         "title" : "View UI",
         "titleLink" : "https://www.iviewui.com/view-ui-plus/guide/introduce",
