@@ -349,6 +349,12 @@ const frontMainTools = [
             "img": "https://tailwindui.com/favicon.ico",
             "description" : "Beautiful UI components, crafted with Tailwind CSS."
         },
+        {
+          "title" : 'Navie UI',
+            "titleLink" : "https://www.naiveui.com/zh-CN/os-theme",
+            "img" : "https://www.naiveui.com/assets/naivelogo-93278402.svg",
+            "description" : "一个 Vue 3 组件库,比较完整，主题可调，使用 TypeScript,快,有点意思"
+        },
     {
         "title" : "View UI",
         "titleLink" : "https://www.iviewui.com/view-ui-plus/guide/introduce",
