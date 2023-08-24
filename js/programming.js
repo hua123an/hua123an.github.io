@@ -337,6 +337,13 @@ const frontMainTools = [
         "description": " 网站快速成型工具"
     },
         {
+            "title" : "nextui",
+            "titleLink" : "https://nextui.org/",
+            "img" : "https://nextui.org/twitter-cards/nextui.jpeg",
+            "description" : "Make beautiful websites regardless of your design experience."
+
+        },
+        {
             "title" : "taliwind",
             "titleLink" : "https://tailwindui.com",
             "img": "https://tailwindui.com/favicon.ico",
