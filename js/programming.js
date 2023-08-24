@@ -415,6 +415,12 @@ const UIFrame = [
         "description" : "完全无样式、完全可访问的 UI 组件，旨在与 Tailwind CSS 完美集成。"
     },
     {
+        "title" : "vbestui",
+        "titleLink" : "https://fudaosheng.gitee.io/vbest-ui/",
+        "img" : "https://fudaosheng.gitee.io/vbest-ui/img/icon.jpg",
+        "description" : "友好，丰富"
+    },
+    {
         "title": "Quasar",
         "titleLink": "https://quasar.dev/",
         "img": "https://cdn.quasar.dev/logo-v2/svg/logo-dark.svg",
