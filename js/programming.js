@@ -609,6 +609,16 @@ const webSource = [{
     "titleLink": "https://www.iconfont.cn/",
     "img": "https://tools.haiyong.site/wp-content/uploads/2022/04/%E9%98%BF%E9%87%8C%E5%9B%BE%E6%A0%87%E5%BA%93.png",
     "description": " 国内功能很强大且图标内容很丰富的矢量图标库"
+},{
+    "title" : "IconPark",
+    "titleLink" : "https://iconpark.oceanengine.com/home",
+    "img" : "https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/static/media/logo_with_name.598fc011.svg",
+    "description" : "字节开源的图标库"
+},{
+    "title" : "Icones",
+    "titleLink" : "https://icones.js.org/",
+    "img" : "",
+    "description" : "icones 一个收藏了 100+ 款免费图标库，并且矢量图标的数量已经超过 100000 个，由 Iconify 提供了图标框架，你可以混合使用上面所有的图标，各式各样的图标库，以及单色、多彩图标类型都有。"
 }, {
     "title": " \n            矢量 logo下载        ",
     "titleLink": "https://worldvectorlogo.com/",
