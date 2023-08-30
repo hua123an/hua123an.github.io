@@ -12,6 +12,7 @@ body{
 }
 .nav{
     margin-bottom: 20px;
+/*    set list-style to true`*/
 }
 .nav a{
     text-decoration: none;
