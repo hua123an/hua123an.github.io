@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/logo.jpg" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>game</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<div id="fixedNav"></div>
+<div class="home-main">
+    <div class="topNav fix-top">
+        <div class="nav scroll bg-white shadow fixed-top">
+            <nav class="topNav"></nav>
+        </div>
+    </div>
+    <div class="nav scroll bg-white shadow fixed-top">
+        <nav class="nav nav-underline">
+            <div style="text-align: center;">
+                <a href="#game" class="nav-link">在线小游戏</a>
+            </div>
+        </nav>
+    </div>
+    <div class="container" style="max-width: 1600px">
+        <div style="text-align: center;">
+            <div class="siteSearch">
+                <input type="text" placeholder="站内搜素" class="input-text">
+                <button class="searchButton">站内搜索</button>
+            </div>
+        </div>
+        <div class="indexGroup" id="game" data-text="在线小游戏">
+            <div id="gameList" class="index">在线小游戏<br></div>
+        </div>
+    </div>
+</div>
+<script src="code.jquery.com_jquery-3.7.0.js"></script>
+<script src="/js/game.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
+<script src="/js/header.js"></script>
+</body>
+</html>
