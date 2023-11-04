@@ -342,6 +342,13 @@ const UIFrame = [
         "description": "Make beautiful websites regardless of your design experience."
 
     },
+    {
+        "title" : "Layui-vue",
+        "titleLink" : "http://www.layui-vue.com/",
+        "img" : "http://www.layui-vue.com/assets/logo-png.1e5f4d2a.png",
+        "description" : "LayUI的vue版本，第三方社区维护。在原有LayUI的基础上，更新和加入了更多组件和属性，以及更多适合开发者的API。"
+    }
+    ,
 
     {
         "title": 'Navie UI',
