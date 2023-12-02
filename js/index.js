@@ -2,7 +2,6 @@
 $(".searchButton").click(function () {
     // 1.获取输入框的值
     var searchValue = $(".input-text").val();
-    console.log(searchValue)
 //     获取所有的title信息，title的信息来自a标签的文本信息
     var titleList = $(".title");
     // 3.遍历titleList，获取每一个title的文本信息
@@ -19,6 +18,22 @@ $(".searchButton").click(function () {
         }
     }
 })
+// 实现搜索引擎搜索
+$('.outButton').click(function(){
+    //1.获取输入框的值
+    let outValue = $('.out-text').val()
+    // 2.实现跳转搜索
+//     (1)判断outValue的值是否为空
+    if(outValue === ''){
+        alert(' 请输入搜索内容')
+    }else {
+        // (2)实现跳转搜索，将outValue的值作为参数传递给搜索引擎，并打开新标签页
+        window.open(`https://www.baidu.com/s?wd=${outValue}`,'_blank')
+        }
+    })
+
+
+
 
 const choseColors = [
     {
