@@ -12,11 +12,13 @@ $(".searchButton").click(function () {
             titleList[i].scrollIntoView({
                 behavior: "smooth",
                 block: "center",
-
             })
             break;
         }
     }
+//     当点击搜索按钮后，清空搜索框的内容
+    searchValue = ''
+
 })
 // 实现搜索引擎搜索
 $('.outButton').click(function(){
@@ -29,8 +31,14 @@ $('.outButton').click(function(){
     }else {
         // (2)实现跳转搜索，将outValue的值作为参数传递给搜索引擎，并打开新标签页
         window.open(`https://www.baidu.com/s?wd=${outValue}`,'_blank')
+        // (3)点击搜索按钮后，清空搜索框的内容
         }
-    })
+    outValue = ''
+    }
+
+
+
+    )
 
 
 
