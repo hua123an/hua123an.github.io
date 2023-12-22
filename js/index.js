@@ -1,12 +1,12 @@
 <!--    实现页内搜索-->
 $(".searchButton").click(function () {
     // 1.获取输入框的值
-    var searchValue = $(".input-text").val();
+    let searchValue = $(".input-text").val();
 //     获取所有的title信息，title的信息来自a标签的文本信息
-    var titleList = $(".title");
+    let titleList = $(".title");
     // 3.遍历titleList，获取每一个title的文本信息
-    for (var i = 0; i < titleList.length; i++) {
-        var title = titleList[i].innerText;
+    for (let i = 0; i < titleList.length; i++) {
+        let title = titleList[i].innerText;
         //     判断搜索框的信息是否能匹配到title的信息，能匹配则定位该元素的位置，然后滚动到该元素位置,忽略大小写
         if (title.toLowerCase().indexOf(searchValue.toLowerCase()) != -1) {
             titleList[i].scrollIntoView({
@@ -15,9 +15,14 @@ $(".searchButton").click(function () {
             })
             break;
         }
+        $(".input-text").val("");
     }
-//     当点击搜索按钮后，清空搜索框的内容
-    searchValue = ''
+//     监听按钮点击事件，清空搜索框的内容
+
+
+
+
+
 
 })
 // 实现搜索引擎搜索
@@ -31,14 +36,13 @@ $('.outButton').click(function(){
     }else {
         // (2)实现跳转搜索，将outValue的值作为参数传递给搜索引擎，并打开新标签页
         window.open(`https://www.baidu.com/s?wd=${outValue}`,'_blank')
-        // (3)点击搜索按钮后，清空搜索框的内容
         }
-    outValue = ''
-    }
+    },
+    function() {
+        let putValue = $('.out-text').val('')
+        putValue = ''
+    })
 
-
-
-    )
 
 
 

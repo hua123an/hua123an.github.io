@@ -4,17 +4,25 @@ $(function () {
 })
 //set can't open console
 // Disable browser default right-click menu
-document.oncontextmenu = function (event) {
-    event.preventDefault()
-}
-// Forbid pressing F12
-document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
-    const e = event || window.event || arguments.callee.caller.arguments[0]
+// document.oncontextmenu = function (event) {
+//     event.preventDefault()
+// }
+// // Forbid pressing F12
+// document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+//     const e = event || window.event || arguments.callee.caller.arguments[0]
+//
+//     if (e && e.keyCode == 123) {
+//         e.returnValue = false
+//         return false
+//     }
+// }
+// 实现点击回到顶部
+$(".backTop").click(function() {
+//     获取当前滚动条的高度
+    $(window).scrollTop();
+    console.log($(window).scrollTop())
 
-    if (e && e.keyCode == 123) {
-        e.returnValue = false
-        return false
-    }
-}
+})
+
 
 
