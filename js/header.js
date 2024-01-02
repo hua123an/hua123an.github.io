@@ -17,12 +17,5 @@ $(function () {
 //     }
 // }
 // 实现点击回到顶部
-$(".backTop").click(function() {
-//     获取当前滚动条的高度
-    $(window).scrollTop();
-    console.log($(window).scrollTop())
-
-})
-
 
 

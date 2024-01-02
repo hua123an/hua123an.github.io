@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/logo.jpg" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公开API</title>
+    <link rel="stylesheet" href="/css/publicAPI.css">
+</head>
+<body>
+<div id="fixedNav"></div>
+<div class="home-main">
+    <div class="topNav fix-top">
+        <div class="nav scroll bg-white shadow fixed-top">
+            <nav class="topNav"></nav>
+        </div>
+    </div>
+    <div class="nav scroll bg-white shadow fixed-top">
+        <nav class="nav nav-underline">
+            <div style="text-align: center;">
+                <a href="#text">文本翻译</a>
+                <a href="#every">每日新闻</a>
+                <a href="#random">随机工具</a>
+                <a href="#info">身份校验</a>
+            </div>
+        </nav>
+    </div>
+    <div class="publicGroup" id="text_translation" data-text="文本翻译">
+        <div id="text" class="translation">文本翻译<br></div>
+    </div>
+    <br>
+    <div class="publicGroup" id='everyNews' data-text="每日新闻">
+        <div id="every" class="news">每日新闻<br></div>
+    </div>
+    <div class="publicGroup" id='randomTools' data-text="随机工具">
+        <div id="random" class="tools">随机工具<br></div>
+    </div>
+    <div class="publicGroup" id='infoCheck' data-text="信息校验">
+        <div id="info" class="check">信息校验<br></div>
+    </div>
+
+
+</div>
+<script src="../code.jquery.com_jquery-3.7.0.js"></script>
+<script src="/js/publicAPI.js"></script>
+<script>
+    $(function () {
+        $("#fixedNav").load("/components/fixedLayout.html");
+    })
+</script>
+<script src="/js/header.js"></script>
+</body>
+</html>
