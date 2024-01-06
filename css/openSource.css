@@ -12,8 +12,6 @@ body{
 }
 .nav{
     margin-bottom: 20px;
-    height: 30px;
-    width: 100%;
 }
 .nav a{
     text-decoration: none;
